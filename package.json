@@ -1,0 +1,16 @@
+{
+  "name": "saas-template",
+  "version": "1.0.0",
+  "description": "SaaS landing page template with Tailwind CSS",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./styles.css --minify",
+    "css": "tailwindcss -i ./src/input.css -o ./styles.css --watch",
+    "serve": "browser-sync start --server --files '*.html, *.css, images/*'",
+    "dev": "concurrently \"npm run css\" \"npm run serve\""
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.1",
+    "tailwindcss": "^3.4.18"
+  }
+}

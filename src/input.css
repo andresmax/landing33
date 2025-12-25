@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================================
+   Base Styles
+   =========================================== */
+
+html, body {
+  background-color: var(--surface-dark);
+  scroll-padding-top: 10rem;
+  scroll-behavior: smooth;
+}
+
+a:visited {
+  color: inherit;
+}
+
+::selection {
+  background-color: var(--brand-primary);
+  color: white;
+}
+
+/* ===========================================
+   Component Classes
+   =========================================== */
+
+/* Primary CTA Button */
+.btn-primary {
+  @apply flex gap-2 items-center justify-center px-5 py-3.5 rounded-full transition-colors;
+  background-color: var(--brand-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-hover);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+/* Nav Glass with fading border */
+.nav-glass {
+  @apply backdrop-blur-xl rounded-full shadow-lg shadow-black/20;
+  background-color: var(--glass-bg);
+  position: relative;
+}
+
+.nav-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  padding: 1px;
+  background: linear-gradient(to bottom, var(--glass-border), transparent 80%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Card Components */
+.card {
+  @apply rounded-lg border backdrop-blur-sm transition-all duration-200;
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+.card-hover {
+  @apply rounded-lg border backdrop-blur-sm transition-all duration-200;
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+.card-hover:hover {
+  border-color: var(--card-border-hover);
+}
+
+/* Learn More Buttons */
+.btn-learn-more {
+  @apply inline-flex items-center justify-center px-5 py-2.5 text-white text-sm font-medium rounded-full transition-colors w-fit;
+  background-color: var(--brand-primary);
+}
+
+.btn-learn-more:hover {
+  background-color: var(--brand-hover);
+}
+
+.btn-learn-more:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+.btn-service-learn-more {
+  @apply inline-flex items-center justify-center pl-3.5 pr-3 py-3 text-white text-xs font-medium rounded-full transition-colors w-fit;
+  background-color: var(--brand-primary);
+}
+
+.btn-service-learn-more:hover {
+  background-color: var(--brand-hover);
+}
+
+.btn-service-learn-more:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+/* Section Header */
+.section-header {
+  @apply flex items-center gap-2 mb-12;
+}
+
+.section-title {
+  @apply text-xl md:text-2xl tracking-tight;
+  color: var(--brand-primary);
+}
+
+/* ===========================================
+   FAQ Accordion Animation
+   =========================================== */
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details .faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+}
+
+details[open] .faq-answer {
+  grid-template-rows: 1fr;
+}
+
+details .faq-answer > div {
+  overflow: hidden;
+}
+
+/* ===========================================
+   Mobile Menu Animation
+   =========================================== */
+
+.mobile-menu-closed {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.mobile-menu-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+#mobile-menu {
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out, visibility 0.2s;
+}
+
+#mobile-menu.nav-glass {
+  border-radius: 1rem;
+}
+
+#mobile-menu.nav-glass::before {
+  border-radius: 1rem;
+}
+
+/* ===========================================
+   Text Color Utilities (CSS Variable Based)
+   =========================================== */
+
+.text-brand-primary {
+  color: var(--brand-primary);
+}
+
+.text-stone-200 {
+  color: var(--text-primary);
+}
+
+.text-stone-300 {
+  color: var(--text-secondary);
+}
+
+.text-stone-400 {
+  color: var(--text-muted);
+}
+
+.text-stone-500 {
+  color: var(--text-subtle);
+}
+
+.text-green-400 {
+  color: var(--status-available);
+}
+
+.bg-green-400 {
+  background-color: var(--status-available);
+}
+
+/* Hover states */
+.hover\:text-brand-primary:hover {
+  color: var(--brand-primary);
+}
+
+.hover\:text-brand-hover:hover {
+  color: var(--brand-hover);
+}
+
+.hover\:bg-brand-primary:hover {
+  background-color: var(--brand-primary);
+}
+
+.hover\:bg-brand-hover:hover {
+  background-color: var(--brand-hover);
+}
+
+/* Marker colors for lists */
+.marker\:text-stone-500::marker,
+.marker\:text-stone-500 ::marker {
+  color: var(--text-subtle);
+}

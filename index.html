@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Product Name | Your tagline here</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your product description goes here. Keep it under 160 characters for best SEO results.">
+    <meta property="og:title" content="Product Name | Your tagline here">
+    <meta property="og:description" content="Your product description goes here.">
+    <meta property="og:image" content="images/og-image.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+    <!-- iOS Status Bar -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#080B0C">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Analytics (replace with your own) -->
+    <!-- <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script> -->
+</head>
+
+<body class="font-sans font-regular text-stone-200 bg-surface-dark">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-primary focus:text-white focus:rounded">Skip to content</a>
+
+    <!-- Page container with dark background -->
+    <div class="relative w-full min-h-screen">
+        <main id="main-content">
+
+            <!-- Header Background Section -->
+            <div class="relative w-full h-[85vh] md:h-[75vh]">
+                <!-- Background image positioned to align bottom with viewport -->
+                <div id="header-bg" class="absolute inset-0 bg-cover bg-bottom bg-no-repeat" style="background-image: url('images/hero.webp')"></div>
+
+                <!-- Gradient overlay fading to main bg color in bottom 1/3 -->
+                <div class="absolute inset-0 pointer-events-none bg-header-gradient"></div>
+
+                <!-- Navigation -->
+                <header class="fixed top-0 left-0 right-0 z-50 py-4" role="banner">
+                    <nav class="max-w-xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12 relative" role="navigation" aria-label="Main navigation">
+                        <div id="nav-bar" class="nav-glass flex items-center justify-between pl-4 pr-2 py-1 sm:cursor-default cursor-pointer">
+                            <!-- Left: Logo -->
+                            <div class="flex-shrink-0 relative z-10">
+                                <a href="/" class="block" aria-label="Home">
+                                    <!-- Replace this SVG with your logo. Use fill="currentColor" for brand color. -->
+                                    <svg class="size-12 text-brand-primary" viewBox="0 0 207 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 53.0607C0 25.4509 10.574 8.53254 25.6125 1.83569L31.8394 11.3523C21.0305 18.5191 13.8637 30.8554 13.8637 53.0607C13.8637 75.1486 21.0305 87.4849 31.8394 94.6517L25.6125 104.168C10.574 97.4715 0 80.4356 0 53.0607Z" fill="currentColor"/>
+                                        <path d="M80.4942 77.6452H67.8238V47.6195C67.8238 43.5735 66.83 40.5567 64.8425 38.5692C62.9259 36.5107 60.3706 35.4815 57.1763 35.4815C53.9111 35.4815 51.3203 36.4752 49.4037 38.4627C47.4872 40.4503 46.5289 43.5025 46.5289 47.6195V77.6452H33.8585V47.6195C33.8585 39.7404 35.8815 33.7779 39.9275 29.7319C43.9736 25.6858 49.2973 23.6628 55.8987 23.6628C63.9907 23.6628 70.0242 26.7506 73.9993 32.9261H74.2122C78.0453 26.7506 84.0788 23.6628 92.3128 23.6628C98.9142 23.6628 104.238 25.6858 108.284 29.7319C112.33 33.7779 114.353 39.7404 114.353 47.6195V77.6452H101.683V47.6195C101.683 43.5025 100.724 40.4503 98.8077 38.4627C96.8912 36.4752 94.3003 35.4815 91.0351 35.4815C87.8409 35.4815 85.2855 36.5107 83.369 38.5692C81.4524 40.5567 80.4942 43.5735 80.4942 47.6195V77.6452Z" fill="currentColor"/>
+                                        <path d="M131.657 77.6452H116.75L136.129 50.8137L117.602 25.047H132.934L145.498 43.8929H145.711L158.275 25.047H173.288L154.549 50.8137L174.14 77.6452H158.808L145.285 57.5216H145.072L131.657 77.6452Z" fill="currentColor"/>
+                                        <path d="M181.314 102.333L174.97 92.816C185.779 85.6492 193.063 73.3129 193.063 51.2251C193.063 29.0197 185.896 16.6834 174.97 9.51658L181.314 0C188.716 3.40717 194.826 9.2816 199.643 17.8583C204.46 26.3175 206.809 37.4789 206.809 51.2251C206.809 64.9712 204.46 76.0152 199.643 84.5918C194.826 93.051 188.716 98.9254 181.314 102.333Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- Center: Navigation Links (hidden on mobile) -->
+                            <div class="hidden sm:flex flex-1 items-center justify-center gap-3 font-medium text-sm text-stone-300">
+                                <a href="#features" class="hover:text-brand-primary transition-colors">Features</a>
+                                <a href="#pricing" class="hover:text-brand-primary transition-colors">Pricing</a>
+                                <a href="#testimonials" class="hover:text-brand-primary transition-colors">Testimonials</a>
+                                <a href="#faq" class="hover:text-brand-primary transition-colors">FAQ</a>
+                            </div>
+
+                            <!-- Right: CTA Button (hidden on mobile) -->
+                            <a href="#cta" class="hidden sm:block flex-shrink-0 bg-white/20 hover:bg-brand-primary text-white text-xs font-medium pl-3.5 pr-3 py-3 rounded-full transition-colors">
+                                Get Started &rarr;
+                            </a>
+
+                            <!-- Mobile: Hamburger Icon (visible only on mobile) -->
+                            <div class="sm:hidden flex-shrink-0 p-3 text-stone-300" aria-hidden="true">
+                                <!-- Hamburger Icon -->
+                                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                                </svg>
+                                <!-- Close Icon (hidden by default) -->
+                                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Menu Dropdown (hidden by default) -->
+                        <div id="mobile-menu" class="mobile-menu-closed sm:hidden absolute left-0 right-0 mt-2 nav-glass p-4 flex flex-col gap-3">
+                            <a href="#features" class="mobile-nav-link text-stone-300 hover:text-brand-primary transition-colors font-medium text-sm py-2">Features</a>
+                            <a href="#pricing" class="mobile-nav-link text-stone-300 hover:text-brand-primary transition-colors font-medium text-sm py-2">Pricing</a>
+                            <a href="#testimonials" class="mobile-nav-link text-stone-300 hover:text-brand-primary transition-colors font-medium text-sm py-2">Testimonials</a>
+                            <a href="#faq" class="mobile-nav-link text-stone-300 hover:text-brand-primary transition-colors font-medium text-sm py-2">FAQ</a>
+                            <a href="#cta" class="mobile-nav-link bg-white/20 hover:bg-brand-primary text-white text-xs font-medium px-4 py-3 rounded-full transition-colors text-center mt-2">
+                                Get Started &rarr;
+                            </a>
+                        </div>
+                    </nav>
+                </header>
+
+                <!-- Hero Section -->
+                <section class="absolute bottom-12 left-0 right-0 z-10" aria-label="Hero section">
+                    <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
+                        <div class="flex flex-col gap-12 items-start justify-start max-w-3xl">
+
+                            <!-- Hero Content Group -->
+                            <div class="flex flex-col gap-6 items-start justify-start w-full">
+
+                                <!-- Main Headline -->
+                                <h1 class="font-medium text-6xl md:text-7xl text-stone-200 leading-none tracking-tighter mb-4">
+                                    Your product <br/>headline here.
+                                </h1>
+
+                                <!-- Supporting Text -->
+                                <div class="max-w-md">
+                                    <p class="font-light text-lg text-stone-300 leading-relaxed">A brief description of what your product does and why it matters. Keep it compelling and clear.</p>
+                                </div>
+
+                            </div>
+
+                            <!-- CTA Button -->
+                            <a href="#cta" class="btn-primary">
+                                <img src="images/avatar.webp" alt="Avatar" class="w-6 h-6 rounded-full">
+                                <span class="font-medium text-sm text-stone-200 leading-none">Start Free Trial &rarr;</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Integrations/Tech Stack Section -->
+            <section class="relative z-0 pt-16 pb-32 opacity-80" aria-label="Integrations">
+                <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 items-start sm:items-center justify-start">
+                        <p class="text-sm text-stone-500 mr-4">Integrates with:</p>
+                        <ul class="flex gap-6 items-center list-none p-0 m-0">
+                            <!-- Replace with your integration logos -->
+                            <li><img src="images/integration-1.svg" alt="Integration 1" class="h-6 w-auto opacity-60"></li>
+                            <li><img src="images/integration-2.svg" alt="Integration 2" class="h-6 w-auto opacity-60"></li>
+                            <li><img src="images/integration-3.svg" alt="Integration 3" class="h-6 w-auto opacity-60"></li>
+                            <li><img src="images/integration-4.svg" alt="Integration 4" class="h-6 w-auto opacity-60"></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="relative z-0" aria-labelledby="features-heading">
+                <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
+                    <h2 id="features-heading" class="sr-only">Features</h2>
+
+                    <!-- Features Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+
+                        <!-- Feature Card 1 -->
+                        <a href="#" class="group relative overflow-hidden rounded-lg h-portfolio">
+                            <img src="images/feature-1.webp" alt="Feature 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <h3 class="text-xl font-medium text-white">Feature One</h3>
+                                <p class="text-sm text-stone-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Brief description of this feature.</p>
+                            </div>
+                        </a>
+
+                        <!-- Feature Card 2 -->
+                        <a href="#" class="group relative overflow-hidden rounded-lg h-portfolio">
+                            <img src="images/feature-2.webp" alt="Feature 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <h3 class="text-xl font-medium text-white">Feature Two</h3>
+                                <p class="text-sm text-stone-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Brief description of this feature.</p>
+                            </div>
+                        </a>
+
+                        <!-- Feature Card 3 -->
+                        <a href="#" class="group relative overflow-hidden rounded-lg h-portfolio">
+                            <img src="images/feature-3.webp" alt="Feature 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <h3 class="text-xl font-medium text-white">Feature Three</h3>
+                                <p class="text-sm text-stone-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Brief description of this feature.</p>
+                            </div>
+                        </a>
+
+                        <!-- Feature Card 4 -->
+                        <a href="#" class="group relative overflow-hidden rounded-lg h-portfolio">
+                            <img src="images/feature-4.webp" alt="Feature 4" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <h3 class="text-xl font-medium text-white">Feature Four</h3>
+                                <p class="text-sm text-stone-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Brief description of this feature.</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section id="pricing" class="relative z-0 py-48" aria-labelledby="pricing-heading">
+                <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
+
+                    <!-- Section Header -->
+                    <div class="max-w-2xl mx-auto text-center mb-16">
+                        <h2 id="pricing-heading" class="text-2xl font-medium text-brand-primary leading-normal tracking-tight mb-8">
+                            Simple pricing
+                        </h2>
+                        <p class="font-medium text-3xl md:text-4xl text-stone-200 leading-tight tracking-tighter">
+                            Choose the plan that works for you. No hidden fees, cancel anytime.
+                        </p>
+                    </div>
+
+                    <!-- Pricing Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                        <!-- Starter Plan -->
+                        <article class="card px-8 py-10 flex flex-col gap-4">
+                            <div class="w-6 h-6 text-brand-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-medium text-stone-200 leading-normal tracking-tight">STARTER</h3>
+                            <p class="text-sm font-normal text-stone-500 leading-normal">$29/month</p>
+                            <p class="text-base font-normal text-stone-300 leading-normal">
+                                Perfect for individuals and small teams getting started.
+                            </p>
+                            <ul class="list-disc list-outside pl-4 space-y-2 text-sm text-stone-400 flex-grow marker:text-stone-500">
+                                <li>Up to 5 users</li>
+                                <li>10GB storage</li>
+                                <li>Basic analytics</li>
+                                <li>Email support</li>
+                            </ul>
+                            <a href="#" class="btn-service-learn-more mt-4">
+                                Get started &rarr;
+                            </a>
+                        </article>
+
+                        <!-- Pro Plan -->
+                        <article class="card px-8 py-10 flex flex-col gap-4">
+                            <div class="w-6 h-6 text-brand-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-medium text-stone-200 leading-normal tracking-tight">PRO</h3>
+                            <p class="text-sm font-normal text-stone-500 leading-normal">$79/month</p>
+                            <p class="text-base font-normal text-stone-300 leading-normal">
+                                For growing teams that need more power and flexibility.
+                            </p>
+                            <ul class="list-disc list-outside pl-4 space-y-2 text-sm text-stone-400 flex-grow marker:text-stone-500">
+                                <li>Up to 25 users</li>
+                                <li>100GB storage</li>
+                                <li>Advanced analytics</li>
+                                <li>Priority support</li>
+                                <li>API access</li>
+                            </ul>
+                            <a href="#" class="btn-service-learn-more mt-4">
+                                Get started &rarr;
+                            </a>
+                        </article>
+
+                        <!-- Enterprise Plan -->
+                        <article class="card px-8 py-10 flex flex-col gap-4 md:col-span-2 lg:col-span-1">
+                            <div class="w-6 h-6 text-brand-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-medium text-stone-200 leading-normal tracking-tight">ENTERPRISE</h3>
+                            <p class="text-sm font-normal text-stone-500 leading-normal">Custom pricing</p>
+                            <p class="text-base font-normal text-stone-300 leading-normal">
+                                For large organizations with custom requirements and dedicated support needs.
+                            </p>
+                            <ul class="list-disc list-outside pl-4 space-y-2 text-sm text-stone-400 flex-grow marker:text-stone-500">
+                                <li>Unlimited users</li>
+                                <li>Unlimited storage</li>
+                                <li>Custom integrations</li>
+                                <li>Dedicated account manager</li>
+                                <li>SLA guarantee</li>
+                            </ul>
+                            <a href="#" class="btn-service-learn-more mt-4">
+                                Contact sales &rarr;
+                            </a>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Showcase Section -->
+            <section class="relative z-0 pb-48" aria-label="Product showcase">
+                <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
+                    <!-- Product Image -->
+                    <figure class="relative rounded-lg overflow-hidden h-office-sm md:h-office">
+                        <img src="images/product.webp" alt="Product dashboard screenshot" class="w-full h-full object-cover">
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Why Choose Us Section -->
+            <section class="relative z-0 pb-48" aria-labelledby="why-heading">
+                <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
+
+                    <!-- Section Header -->
+                    <h2 id="why-heading" class="text-2xl font-medium text-brand-primary leading-normal tracking-tight mb-8">
+                        Why choose us
+                    </h2>
+
+                    <!-- Main Headline -->
+                    <div class="max-w-3xl mb-24">
+                        <p class="font-medium text-3xl md:text-4xl text-stone-200 leading-tight tracking-tighter">
+                            Built by experts who understand your challenges. Trusted by thousands of companies worldwide.
+                        </p>
+                    </div>
+
+                    <!-- Benefits Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                        <!-- Benefit 1 -->
+                        <article class="card px-8 py-10 flex flex-col gap-4">
+                            <div class="w-5 h-5 text-brand-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-medium text-brand-primary leading-normal tracking-tight">
+                                Lightning fast
+                            </h3>
+                            <p class="text-base font-normal text-stone-300 leading-normal">
+                                Built for speed from the ground up. Experience response times measured in milliseconds.
+                            </p>
+                        </article>
+
+                        <!-- Benefit 2 -->
+                        <article class="card px-8 py-10 flex flex-col gap-4">
+                            <div class="w-5 h-5 text-brand-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-medium text-brand-primary leading-normal tracking-tight">
+                                Enterprise security
+                            </h3>
+                            <p class="text-base font-normal text-stone-300 leading-normal">
+                                Bank-level encryption, SOC 2 compliance, and regular security audits keep your data safe.
+                            </p>
+                        </article>
+
+                        <!-- Benefit 3 -->
+                        <article class="card px-8 py-10 flex flex-col gap-4">
+                            <div class="w-5 h-5 text-brand-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-medium text-brand-primary leading-normal tracking-tight">
+                                Developer friendly
+                            </h3>
+                            <p class="text-base font-normal text-stone-300 leading-normal">
+                                Comprehensive APIs, webhooks, and integrations make it easy to connect with your existing tools.
+                            </p>
+                        </article>
+
+                        <!-- Benefit 4 -->
+                        <article class="card px-8 py-10 flex flex-col gap-4">
+                            <div class="w-5 h-5 text-brand-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-medium text-brand-primary leading-normal tracking-tight">
+                                24/7 support
+                            </h3>
+                            <p class="text-base font-normal text-stone-300 leading-normal">
+                                Our team is always available to help. Get answers when you need them, day or night.
+                            </p>
+                        </article>
+
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <dl class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                        <!-- Stat 1 -->
+                        <div class="card px-6 py-8">
+                            <dt class="text-5xl md:text-6xl font-light text-brand-primary tracking-tight mb-3">10K+</dt>
+                            <dd class="text-sm text-stone-300 leading-relaxed">Active users worldwide</dd>
+                        </div>
+                        <!-- Stat 2 -->
+                        <div class="card px-6 py-8">
+                            <dt class="text-5xl md:text-6xl font-light text-brand-primary tracking-tight mb-3">99.9%</dt>
+                            <dd class="text-sm text-stone-300 leading-relaxed">Uptime guarantee</dd>
+                        </div>
+                        <!-- Stat 3 -->
+                        <div class="card px-6 py-8">
+                            <dt class="text-5xl md:text-6xl font-light text-brand-primary tracking-tight mb-3">50+</dt>
+                            <dd class="text-sm text-stone-300 leading-relaxed">Integrations available</dd>
+                        </div>
+                        <!-- Stat 4 -->
+                        <div class="card px-6 py-8">
+                            <dt class="text-5xl md:text-6xl font-light text-brand-primary tracking-tight mb-3">4.9</dt>
+                            <dd class="text-sm text-stone-300 leading-relaxed">Average customer rating</dd>
+                        </div>
+                    </dl>
+
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section id="testimonials" class="relative z-0 py-48 w-full bg-surface-footer" aria-labelledby="testimonials-heading">
+                <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
+
+                    <!-- Section Header -->
+                    <h2 id="testimonials-heading" class="text-2xl font-medium text-brand-primary leading-normal tracking-tight mb-8">
+                        What our customers say
+                    </h2>
+
+                    <!-- Main Headline -->
+                    <div class="max-w-3xl mb-16">
+                        <p class="font-medium text-3xl md:text-4xl text-stone-200 leading-tight tracking-tighter">
+                            Join thousands of satisfied customers who have transformed their workflows with our platform.
+                        </p>
+                    </div>
+
+                    <!-- Testimonials Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+                        <!-- Testimonial 1 -->
+                        <article class="card-hover p-6 flex flex-col gap-4">
+                            <div class="flex items-center gap-3">
+                                <img src="images/testimonial-1.webp" alt="Sarah Chen" class="w-12 h-12 rounded-full object-cover">
+                                <div>
+                                    <p class="font-medium text-stone-200">Sarah Chen</p>
+                                    <p class="text-sm text-stone-500">CEO at TechStart</p>
+                                </div>
+                            </div>
+                            <p class="text-stone-300 leading-relaxed">"This product has completely transformed how our team works. The efficiency gains have been incredible."</p>
+                        </article>
+
+                        <!-- Testimonial 2 -->
+                        <article class="card-hover p-6 flex flex-col gap-4">
+                            <div class="flex items-center gap-3">
+                                <img src="images/testimonial-2.webp" alt="Marcus Johnson" class="w-12 h-12 rounded-full object-cover">
+                                <div>
+                                    <p class="font-medium text-stone-200">Marcus Johnson</p>
+                                    <p class="text-sm text-stone-500">CTO at ScaleUp</p>
+                                </div>
+                            </div>
+                            <p class="text-stone-300 leading-relaxed">"The best investment we've made this year. Our productivity has increased by 40% since switching."</p>
+                        </article>
+
+                        <!-- Testimonial 3 -->
+                        <article class="card-hover p-6 flex flex-col gap-4">
+                            <div class="flex items-center gap-3">
+                                <img src="images/testimonial-3.webp" alt="Emily Rodriguez" class="w-12 h-12 rounded-full object-cover">
+                                <div>
+                                    <p class="font-medium text-stone-200">Emily Rodriguez</p>
+                                    <p class="text-sm text-stone-500">Product Lead at Innovate</p>
+                                </div>
+                            </div>
+                            <p class="text-stone-300 leading-relaxed">"Outstanding support and a product that just works. Highly recommend for any growing team."</p>
+                        </article>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="relative z-0 py-48" aria-labelledby="faq-heading">
+                <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
+
+                    <!-- Section Header -->
+                    <div class="text-center mb-16">
+                        <h2 id="faq-heading" class="text-2xl font-medium text-brand-primary leading-normal tracking-tight mb-8">
+                            FAQ
+                        </h2>
+
+                        <!-- Main Headline -->
+                        <p class="font-medium text-3xl md:text-4xl text-stone-200 leading-tight tracking-tighter max-w-3xl mx-auto">
+                            Have questions? We've got answers. Here are the most common things people ask us.
+                        </p>
+                    </div>
+
+                    <!-- FAQ Accordion -->
+                    <div class="max-w-3xl mx-auto space-y-4">
+
+                        <!-- FAQ Item 1 -->
+                        <details class="group card">
+                            <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-lg font-medium text-stone-200 list-none">
+                                <span>How does the free trial work?</span>
+                                <svg class="w-5 h-5 text-brand-primary transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                </svg>
+                            </summary>
+                            <div class="faq-answer">
+                                <div>
+                                    <div class="px-6 pb-5 text-stone-300 leading-relaxed">
+                                        You get 14 days of full access to all features, no credit card required. At the end of your trial, you can choose a plan that fits your needs or continue with our free tier.
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- FAQ Item 2 -->
+                        <details class="group card">
+                            <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-lg font-medium text-stone-200 list-none">
+                                <span>Can I change my plan later?</span>
+                                <svg class="w-5 h-5 text-brand-primary transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                </svg>
+                            </summary>
+                            <div class="faq-answer">
+                                <div>
+                                    <div class="px-6 pb-5 text-stone-300 leading-relaxed">
+                                        Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any difference in billing.
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- FAQ Item 3 -->
+                        <details class="group card">
+                            <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-lg font-medium text-stone-200 list-none">
+                                <span>What payment methods do you accept?</span>
+                                <svg class="w-5 h-5 text-brand-primary transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                </svg>
+                            </summary>
+                            <div class="faq-answer">
+                                <div>
+                                    <div class="px-6 pb-5 text-stone-300 leading-relaxed">
+                                        We accept all major credit cards (Visa, Mastercard, Amex), PayPal, and bank transfers for annual plans. Enterprise customers can also pay via invoice.
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- FAQ Item 4 -->
+                        <details class="group card">
+                            <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-lg font-medium text-stone-200 list-none">
+                                <span>Is my data secure?</span>
+                                <svg class="w-5 h-5 text-brand-primary transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                </svg>
+                            </summary>
+                            <div class="faq-answer">
+                                <div>
+                                    <div class="px-6 pb-5 text-stone-300 leading-relaxed">
+                                        Absolutely. We use AES-256 encryption for data at rest, TLS 1.3 for data in transit, and are SOC 2 Type II certified. Your data is backed up daily across multiple regions.
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- FAQ Item 5 -->
+                        <details class="group card">
+                            <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-lg font-medium text-stone-200 list-none">
+                                <span>Do you offer refunds?</span>
+                                <svg class="w-5 h-5 text-brand-primary transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                </svg>
+                            </summary>
+                            <div class="faq-answer">
+                                <div>
+                                    <div class="px-6 pb-5 text-stone-300 leading-relaxed">
+                                        Yes, we offer a 30-day money-back guarantee. If you're not satisfied for any reason, contact our support team for a full refund.
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- FAQ Item 6 -->
+                        <details class="group card">
+                            <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-lg font-medium text-stone-200 list-none">
+                                <span>How do I get support?</span>
+                                <svg class="w-5 h-5 text-brand-primary transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                </svg>
+                            </summary>
+                            <div class="faq-answer">
+                                <div>
+                                    <div class="px-6 pb-5 text-stone-300 leading-relaxed">
+                                        We offer email support for all plans, with priority chat support for Pro and Enterprise customers. Our average response time is under 2 hours during business hours.
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer Section -->
+        <footer id="cta" class="relative z-0 w-full" role="contentinfo">
+            <!-- Top Fade Gradient (fades from main bg to transparent) -->
+            <div class="absolute inset-x-0 top-0 h-64 bg-footer-gradient pointer-events-none z-10"></div>
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-cover bg-bottom bg-no-repeat" style="background-image: url('images/footer.webp')"></div>
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-[rgba(0,0,0,0.76)]"></div>
+
+            <div class="relative max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12 pt-48 pb-24">
+
+                <!-- Footer Content - Centered -->
+                <div class="flex flex-col items-center text-center gap-9">
+
+                    <!-- Available badge (optional) -->
+                    <div class="backdrop-blur-sm bg-white/5 flex gap-1 items-center justify-center px-3 py-1.5 rounded-full">
+                        <div class="w-1 h-1 bg-green-400 rounded-full"></div>
+                        <p class="text-sm font-normal text-green-400">Ready to get started</p>
+                    </div>
+
+                    <!-- Main Content Block -->
+                    <div class="flex flex-col items-center gap-5">
+                        <!-- Main Headline -->
+                        <h2 class="text-5xl md:text-6xl font-medium text-stone-50 text-center leading-none tracking-tighter">
+                            Start building <br/>today.
+                        </h2>
+
+                        <!-- Subtext -->
+                        <p class="text-xl font-normal text-stone-400 text-center leading-relaxed tracking-tight max-w-lg">
+                            Join thousands of teams already using our platform to work smarter.
+                        </p>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <a href="#" class="btn-primary">
+                        <img src="images/avatar.webp" alt="Avatar" class="w-6 h-6 rounded-full">
+                        <span class="font-medium text-sm text-white leading-none">Start Free Trial &rarr;</span>
+                    </a>
+
+                    <!-- Email Link -->
+                    <a href="mailto:hello@yourproduct.com" class="font-medium text-2xl text-brand-primary hover:text-brand-hover transition-colors tracking-tight">
+                        hello@yourproduct.com
+                    </a>
+
+                    <!-- Social Icons -->
+                    <nav class="flex gap-3.5 items-center justify-center" aria-label="Social media links">
+                        <a href="#" target="_blank" rel="noopener" class="text-stone-500 hover:text-white transition-colors" aria-label="Follow us on Twitter">
+                            <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" class="text-stone-500 hover:text-white transition-colors" aria-label="Follow us on LinkedIn">
+                            <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </nav>
+
+                    <!-- Footer Text -->
+                    <div class="text-center space-y-3 mt-8">
+                        <p class="text-sm font-normal text-stone-300 tracking-tight mb-6">Fast. Simple. Powerful.</p>
+                        <p class="text-sm font-normal text-stone-500 tracking-tight">&copy; 2025 Your Product Name</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+    <!-- FAQ Accordion Animation -->
+    <script>
+    document.querySelectorAll('details').forEach((details) => {
+        const content = details.querySelector('.faq-answer');
+        if (!content) return;
+
+        details.addEventListener('click', (e) => {
+            if (details.open) {
+                e.preventDefault();
+                content.style.gridTemplateRows = '0fr';
+                setTimeout(() => { details.open = false; }, 300);
+            }
+        });
+
+        details.addEventListener('toggle', () => {
+            if (details.open) {
+                content.style.gridTemplateRows = '1fr';
+            }
+        });
+    });
+    </script>
+
+    <!-- Mobile Menu Toggle -->
+    <script>
+    (function() {
+        const navBar = document.getElementById('nav-bar');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const logoLink = navBar ? navBar.querySelector('a[aria-label="Home"]') : null;
+
+        if (!navBar || !mobileMenu) return;
+
+        let isOpen = false;
+
+        function openMenu() {
+            isOpen = true;
+            mobileMenu.classList.remove('mobile-menu-closed');
+            mobileMenu.classList.add('mobile-menu-open');
+            hamburgerIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+        }
+
+        function closeMenu() {
+            isOpen = false;
+            mobileMenu.classList.remove('mobile-menu-open');
+            mobileMenu.classList.add('mobile-menu-closed');
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        }
+
+        // Toggle menu on nav bar click (mobile only)
+        navBar.addEventListener('click', (e) => {
+            // Skip if not mobile (sm breakpoint = 640px)
+            if (window.innerWidth >= 640) return;
+
+            // Let logo link work normally
+            if (logoLink && logoLink.contains(e.target)) return;
+
+            e.stopPropagation();
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (isOpen && !mobileMenu.contains(e.target) && !navBar.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // Close menu when clicking a nav link
+        mobileMenu.querySelectorAll('.mobile-nav-link').forEach((link) => {
+            link.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isOpen) {
+                closeMenu();
+            }
+        });
+    })();
+    </script>
+</body>
+
+</html>
