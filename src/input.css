@@ -28,11 +28,26 @@ a:visited {
 /* Primary CTA Button */
 .btn-primary {
   @apply flex gap-2 items-center justify-center px-5 py-3.5 rounded-full transition-colors;
-  background-color: var(--brand-primary);
+  background-color: var(--nav-button-bg);
+  color: var(--nav-button-text);
 }
 
 .btn-primary:hover {
-  background-color: var(--brand-hover);
+  background-color: var(--brand-primary);
+  color: white;
+}
+
+/* Hero CTA Button */
+.btn-hero {
+  @apply flex items-center justify-center px-5 py-[18px] rounded-full transition-colors;
+  background-color: white;
+  color: #688b9d;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-hero:hover {
+  background-color: var(--brand-primary);
+  color: white;
 }
 
 .btn-primary:focus-visible {
@@ -42,9 +57,21 @@ a:visited {
 
 /* Nav Glass with fading border */
 .nav-glass {
-  @apply backdrop-blur-xl rounded-full shadow-lg shadow-black/20;
+  @apply backdrop-blur-xl rounded-full;
   background-color: var(--glass-bg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   position: relative;
+}
+
+/* Nav Button */
+.nav-button {
+  background-color: var(--nav-button-bg);
+  color: var(--nav-button-text);
+}
+
+.nav-button:hover {
+  background-color: var(--brand-primary);
+  color: white;
 }
 
 .nav-glass::before {
@@ -80,12 +107,14 @@ a:visited {
 
 /* Learn More Buttons */
 .btn-learn-more {
-  @apply inline-flex items-center justify-center px-5 py-2.5 text-white text-sm font-medium rounded-full transition-colors w-fit;
-  background-color: var(--brand-primary);
+  @apply inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full transition-colors w-fit;
+  background-color: var(--nav-button-bg);
+  color: var(--nav-button-text);
 }
 
 .btn-learn-more:hover {
-  background-color: var(--brand-hover);
+  background-color: var(--brand-primary);
+  color: white;
 }
 
 .btn-learn-more:focus-visible {
@@ -94,12 +123,14 @@ a:visited {
 }
 
 .btn-service-learn-more {
-  @apply inline-flex items-center justify-center pl-3.5 pr-3 py-3 text-white text-xs font-medium rounded-full transition-colors w-fit;
-  background-color: var(--brand-primary);
+  @apply inline-flex items-center justify-center pl-3.5 pr-3 py-3 text-xs font-medium rounded-full transition-colors w-fit;
+  background-color: var(--nav-button-bg);
+  color: var(--nav-button-text);
 }
 
 .btn-service-learn-more:hover {
-  background-color: var(--brand-hover);
+  background-color: var(--brand-primary);
+  color: white;
 }
 
 .btn-service-learn-more:focus-visible {

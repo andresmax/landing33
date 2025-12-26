@@ -45,9 +45,9 @@
         <main id="main-content">
 
             <!-- Header Background Section -->
-            <div class="relative w-full h-[85vh] md:h-[75vh]">
+            <div class="relative w-full">
                 <!-- Background image positioned to align bottom with viewport -->
-                <div id="header-bg" class="absolute inset-0 bg-cover bg-bottom bg-no-repeat" style="background-image: url('images/hero.webp')"></div>
+                <div id="header-bg" class="absolute inset-0 bg-cover bg-top bg-no-repeat" style="background-image: url('images/headerbg.png')"></div>
 
                 <!-- Gradient overlay fading to main bg color in bottom 1/3 -->
                 <div class="absolute inset-0 pointer-events-none bg-header-gradient"></div>
@@ -55,22 +55,21 @@
                 <!-- Navigation -->
                 <header class="fixed top-0 left-0 right-0 z-50 py-4" role="banner">
                     <nav class="max-w-xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12 relative" role="navigation" aria-label="Main navigation">
-                        <div id="nav-bar" class="nav-glass flex items-center justify-between pl-4 pr-2 py-1 sm:cursor-default cursor-pointer">
+                        <div id="nav-bar" class="nav-glass flex items-center justify-between pl-5 pr-1.5 py-1.5 sm:cursor-default cursor-pointer">
                             <!-- Left: Logo -->
                             <div class="flex-shrink-0 relative z-10">
                                 <a href="/" class="block" aria-label="Home">
-                                    <!-- Replace this SVG with your logo. Use fill="currentColor" for brand color. -->
-                                    <svg class="size-12 text-brand-primary" viewBox="0 0 207 105" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 53.0607C0 25.4509 10.574 8.53254 25.6125 1.83569L31.8394 11.3523C21.0305 18.5191 13.8637 30.8554 13.8637 53.0607C13.8637 75.1486 21.0305 87.4849 31.8394 94.6517L25.6125 104.168C10.574 97.4715 0 80.4356 0 53.0607Z" fill="currentColor"/>
-                                        <path d="M80.4942 77.6452H67.8238V47.6195C67.8238 43.5735 66.83 40.5567 64.8425 38.5692C62.9259 36.5107 60.3706 35.4815 57.1763 35.4815C53.9111 35.4815 51.3203 36.4752 49.4037 38.4627C47.4872 40.4503 46.5289 43.5025 46.5289 47.6195V77.6452H33.8585V47.6195C33.8585 39.7404 35.8815 33.7779 39.9275 29.7319C43.9736 25.6858 49.2973 23.6628 55.8987 23.6628C63.9907 23.6628 70.0242 26.7506 73.9993 32.9261H74.2122C78.0453 26.7506 84.0788 23.6628 92.3128 23.6628C98.9142 23.6628 104.238 25.6858 108.284 29.7319C112.33 33.7779 114.353 39.7404 114.353 47.6195V77.6452H101.683V47.6195C101.683 43.5025 100.724 40.4503 98.8077 38.4627C96.8912 36.4752 94.3003 35.4815 91.0351 35.4815C87.8409 35.4815 85.2855 36.5107 83.369 38.5692C81.4524 40.5567 80.4942 43.5735 80.4942 47.6195V77.6452Z" fill="currentColor"/>
-                                        <path d="M131.657 77.6452H116.75L136.129 50.8137L117.602 25.047H132.934L145.498 43.8929H145.711L158.275 25.047H173.288L154.549 50.8137L174.14 77.6452H158.808L145.285 57.5216H145.072L131.657 77.6452Z" fill="currentColor"/>
-                                        <path d="M181.314 102.333L174.97 92.816C185.779 85.6492 193.063 73.3129 193.063 51.2251C193.063 29.0197 185.896 16.6834 174.97 9.51658L181.314 0C188.716 3.40717 194.826 9.2816 199.643 17.8583C204.46 26.3175 206.809 37.4789 206.809 51.2251C206.809 64.9712 204.46 76.0152 199.643 84.5918C194.826 93.051 188.716 98.9254 181.314 102.333Z" fill="currentColor"/>
+                                    <!-- Logo -->
+                                    <svg class="h-4 w-auto" viewBox="0 0 39 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M25.4004 17H21.9963L13.5702 3.87775L6.11917 14.1887H16.1048L18.2348 16.9183H0L12.9012 8.2349e-06H14.4843L25.4004 17Z" fill="white"/>
+                                        <path d="M32.2171 17H28.7547L17.6783 8.2349e-06H21.1407L26.6789 8.5L32.2171 17Z" fill="white"/>
+                                        <path d="M39 17H35.5376L24.4612 0H27.9236L33.4618 8.5L39 17Z" fill="white"/>
                                     </svg>
                                 </a>
                             </div>
 
                             <!-- Center: Navigation Links (hidden on mobile) -->
-                            <div class="hidden sm:flex flex-1 items-center justify-center gap-3 font-medium text-sm text-stone-300">
+                            <div class="hidden sm:flex items-center gap-3 font-medium text-sm text-stone-300">
                                 <a href="#features" class="hover:text-brand-primary transition-colors">Features</a>
                                 <a href="#pricing" class="hover:text-brand-primary transition-colors">Pricing</a>
                                 <a href="#testimonials" class="hover:text-brand-primary transition-colors">Testimonials</a>
@@ -78,8 +77,8 @@
                             </div>
 
                             <!-- Right: CTA Button (hidden on mobile) -->
-                            <a href="#cta" class="hidden sm:block flex-shrink-0 bg-white/20 hover:bg-brand-primary text-white text-xs font-medium pl-3.5 pr-3 py-3 rounded-full transition-colors">
-                                Get Started &rarr;
+                            <a href="#cta" class="hidden sm:block flex-shrink-0 nav-button text-xs font-medium px-3 py-2.5 rounded-full transition-colors">
+                                Get Started
                             </a>
 
                             <!-- Mobile: Hamburger Icon (visible only on mobile) -->
@@ -109,30 +108,47 @@
                 </header>
 
                 <!-- Hero Section -->
-                <section class="absolute bottom-12 left-0 right-0 z-10" aria-label="Hero section">
+                <section class="relative pt-32 md:pt-40 pb-32 z-10" aria-label="Hero section">
                     <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
-                        <div class="flex flex-col gap-12 items-start justify-start max-w-3xl">
+                        <div class="flex flex-col gap-7 items-center justify-center text-center">
 
                             <!-- Hero Content Group -->
-                            <div class="flex flex-col gap-6 items-start justify-start w-full">
+                            <div class="flex flex-col gap-3.5 items-center justify-center w-full">
 
                                 <!-- Main Headline -->
-                                <h1 class="font-medium text-6xl md:text-7xl text-stone-200 leading-none tracking-tighter mb-4">
-                                    Your product <br/>headline here.
+                                <h1 class="font-medium text-4xl md:text-[56px] text-white leading-none tracking-[-0.05em]">
+                                    Your life, made easier.
                                 </h1>
 
                                 <!-- Supporting Text -->
-                                <div class="max-w-md">
-                                    <p class="font-light text-lg text-stone-300 leading-relaxed">A brief description of what your product does and why it matters. Keep it compelling and clear.</p>
+                                <div class="max-w-[487px]">
+                                    <p class="font-normal text-[17px] text-white leading-relaxed tracking-tight">The AI-native code editor that gets it exactly right. No approximation. No bloat. Just perfect code, every time.</p>
                                 </div>
 
                             </div>
 
                             <!-- CTA Button -->
-                            <a href="#cta" class="btn-primary">
-                                <img src="images/avatar.webp" alt="Avatar" class="w-6 h-6 rounded-full">
-                                <span class="font-medium text-sm text-stone-200 leading-none">Start Free Trial &rarr;</span>
+                            <a href="#cta" class="btn-hero">
+                                <span class="font-bold text-[13px] leading-none">Get Started &rarr;</span>
                             </a>
+
+                            <!-- G2 Reviews Badge -->
+                            <div class="flex items-center gap-2 text-[13px] text-white font-medium">
+                                <span>G2</span>
+                                <div class="flex -space-x-0.5 -translate-y-px">
+                                    <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                </div>
+                                <span>133+ Reviews</span>
+                            </div>
+
+                            <!-- Hero Image -->
+                            <div class="w-full max-w-[980px] mt-20 p-2.5 rounded-2xl backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl">
+                                <img src="images/heroimage.png" alt="Product screenshot" class="w-full h-auto rounded-xl">
+                            </div>
 
                         </div>
                     </div>
@@ -140,69 +156,82 @@
             </div>
 
             <!-- Integrations/Tech Stack Section -->
-            <section class="relative z-0 pt-16 pb-32 opacity-80" aria-label="Integrations">
+            <section class="relative z-0 pb-32" aria-label="Integrations">
                 <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
-                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 items-start sm:items-center justify-start">
-                        <p class="text-sm text-stone-500 mr-4">Integrates with:</p>
-                        <ul class="flex gap-6 items-center list-none p-0 m-0">
-                            <!-- Replace with your integration logos -->
-                            <li><img src="images/integration-1.svg" alt="Integration 1" class="h-6 w-auto opacity-60"></li>
-                            <li><img src="images/integration-2.svg" alt="Integration 2" class="h-6 w-auto opacity-60"></li>
-                            <li><img src="images/integration-3.svg" alt="Integration 3" class="h-6 w-auto opacity-60"></li>
-                            <li><img src="images/integration-4.svg" alt="Integration 4" class="h-6 w-auto opacity-60"></li>
+                    <div class="flex flex-col gap-5 items-center text-center">
+                        <p class="text-base text-white tracking-tight">Integrates with your workflow</p>
+                        <ul class="flex flex-wrap justify-center gap-6 items-center list-none p-0 m-0">
+                            <li><img src="images/logo-openai.svg" alt="OpenAI" class="h-6 w-auto"></li>
+                            <li><img src="images/logo-cursor.svg" alt="Cursor" class="h-6 w-auto"></li>
+                            <li><img src="images/logo-anthropic.svg" alt="Anthropic" class="h-3.5 w-auto"></li>
+                            <li><img src="images/logo-n8n.svg" alt="n8n" class="h-5 w-auto"></li>
+                            <li><img src="images/logo-gemini.svg" alt="Gemini" class="h-5 w-auto"></li>
                         </ul>
                     </div>
                 </div>
             </section>
 
             <!-- Features Section -->
-            <section id="features" class="relative z-0" aria-labelledby="features-heading">
+            <section id="features" class="relative z-0 pb-32" aria-labelledby="features-heading">
                 <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
                     <h2 id="features-heading" class="sr-only">Features</h2>
 
                     <!-- Features Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
                         <!-- Feature Card 1 -->
-                        <a href="#" class="group relative overflow-hidden rounded-lg h-portfolio">
-                            <img src="images/feature-1.webp" alt="Feature 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors"></div>
-                            <div class="absolute bottom-6 left-6 right-6">
-                                <h3 class="text-xl font-medium text-white">Feature One</h3>
-                                <p class="text-sm text-stone-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Brief description of this feature.</p>
+                        <article class="card overflow-hidden">
+                            <img src="images/headerbg.png" alt="AI MVP Development" class="w-full h-64 md:h-80 object-cover rounded-t-lg">
+                            <div class="p-8 pt-10">
+                                <h3 class="text-[22px] font-medium text-white tracking-tight mb-4">AI MVP Development</h3>
+                                <p class="text-base text-white leading-relaxed">For startups we believe in, we go all-in. Reduced retainer, shared equity, long-term commitment. We work closely with founders to shape product strategy and build what matters.</p>
                             </div>
-                        </a>
+                        </article>
 
                         <!-- Feature Card 2 -->
-                        <a href="#" class="group relative overflow-hidden rounded-lg h-portfolio">
-                            <img src="images/feature-2.webp" alt="Feature 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors"></div>
-                            <div class="absolute bottom-6 left-6 right-6">
-                                <h3 class="text-xl font-medium text-white">Feature Two</h3>
-                                <p class="text-sm text-stone-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Brief description of this feature.</p>
+                        <article class="card overflow-hidden">
+                            <img src="images/headerbg.png" alt="AI MVP Development" class="w-full h-64 md:h-80 object-cover rounded-t-lg">
+                            <div class="p-8 pt-10">
+                                <h3 class="text-[22px] font-medium text-white tracking-tight mb-4">AI MVP Development</h3>
+                                <p class="text-base text-white leading-relaxed">For startups we believe in, we go all-in. Reduced retainer, shared equity, long-term commitment. We work closely with founders to shape product strategy and build what matters.</p>
                             </div>
-                        </a>
+                        </article>
 
                         <!-- Feature Card 3 -->
-                        <a href="#" class="group relative overflow-hidden rounded-lg h-portfolio">
-                            <img src="images/feature-3.webp" alt="Feature 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors"></div>
-                            <div class="absolute bottom-6 left-6 right-6">
-                                <h3 class="text-xl font-medium text-white">Feature Three</h3>
-                                <p class="text-sm text-stone-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Brief description of this feature.</p>
+                        <article class="card overflow-hidden">
+                            <img src="images/headerbg.png" alt="AI MVP Development" class="w-full h-64 md:h-80 object-cover rounded-t-lg">
+                            <div class="p-8 pt-10">
+                                <h3 class="text-[22px] font-medium text-white tracking-tight mb-4">AI MVP Development</h3>
+                                <p class="text-base text-white leading-relaxed">For startups we believe in, we go all-in. Reduced retainer, shared equity, long-term commitment. We work closely with founders to shape product strategy and build what matters.</p>
                             </div>
-                        </a>
+                        </article>
 
                         <!-- Feature Card 4 -->
-                        <a href="#" class="group relative overflow-hidden rounded-lg h-portfolio">
-                            <img src="images/feature-4.webp" alt="Feature 4" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors"></div>
-                            <div class="absolute bottom-6 left-6 right-6">
-                                <h3 class="text-xl font-medium text-white">Feature Four</h3>
-                                <p class="text-sm text-stone-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Brief description of this feature.</p>
+                        <article class="card overflow-hidden">
+                            <img src="images/headerbg.png" alt="AI MVP Development" class="w-full h-64 md:h-80 object-cover rounded-t-lg">
+                            <div class="p-8 pt-10">
+                                <h3 class="text-[22px] font-medium text-white tracking-tight mb-4">AI MVP Development</h3>
+                                <p class="text-base text-white leading-relaxed">For startups we believe in, we go all-in. Reduced retainer, shared equity, long-term commitment. We work closely with founders to shape product strategy and build what matters.</p>
                             </div>
-                        </a>
+                        </article>
 
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Section -->
+            <section class="relative z-0 py-32" aria-labelledby="why-heading">
+                <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
+                    <div class="flex flex-col gap-7 items-start max-w-xl">
+                        <h2 id="why-heading" class="text-2xl font-medium text-white leading-relaxed tracking-tight">
+                            Why mx.works?
+                        </h2>
+                        <p class="text-[22px] font-normal text-stone-100 leading-relaxed tracking-tight">
+                            Building with AI is exciting, but most teams hit the same roadblocks: it takes too long to hire the right people, projects stall before they launch.
+                        </p>
+                        <a href="#cta" class="btn-hero">
+                            <span class="font-bold text-[13px] leading-none">Get Started &rarr;</span>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -306,114 +335,6 @@
                     <figure class="relative rounded-lg overflow-hidden h-office-sm md:h-office">
                         <img src="images/product.webp" alt="Product dashboard screenshot" class="w-full h-full object-cover">
                     </figure>
-                </div>
-            </section>
-
-            <!-- Why Choose Us Section -->
-            <section class="relative z-0 pb-48" aria-labelledby="why-heading">
-                <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
-
-                    <!-- Section Header -->
-                    <h2 id="why-heading" class="text-2xl font-medium text-brand-primary leading-normal tracking-tight mb-8">
-                        Why choose us
-                    </h2>
-
-                    <!-- Main Headline -->
-                    <div class="max-w-3xl mb-24">
-                        <p class="font-medium text-3xl md:text-4xl text-stone-200 leading-tight tracking-tighter">
-                            Built by experts who understand your challenges. Trusted by thousands of companies worldwide.
-                        </p>
-                    </div>
-
-                    <!-- Benefits Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-                        <!-- Benefit 1 -->
-                        <article class="card px-8 py-10 flex flex-col gap-4">
-                            <div class="w-5 h-5 text-brand-primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-medium text-brand-primary leading-normal tracking-tight">
-                                Lightning fast
-                            </h3>
-                            <p class="text-base font-normal text-stone-300 leading-normal">
-                                Built for speed from the ground up. Experience response times measured in milliseconds.
-                            </p>
-                        </article>
-
-                        <!-- Benefit 2 -->
-                        <article class="card px-8 py-10 flex flex-col gap-4">
-                            <div class="w-5 h-5 text-brand-primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-medium text-brand-primary leading-normal tracking-tight">
-                                Enterprise security
-                            </h3>
-                            <p class="text-base font-normal text-stone-300 leading-normal">
-                                Bank-level encryption, SOC 2 compliance, and regular security audits keep your data safe.
-                            </p>
-                        </article>
-
-                        <!-- Benefit 3 -->
-                        <article class="card px-8 py-10 flex flex-col gap-4">
-                            <div class="w-5 h-5 text-brand-primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-medium text-brand-primary leading-normal tracking-tight">
-                                Developer friendly
-                            </h3>
-                            <p class="text-base font-normal text-stone-300 leading-normal">
-                                Comprehensive APIs, webhooks, and integrations make it easy to connect with your existing tools.
-                            </p>
-                        </article>
-
-                        <!-- Benefit 4 -->
-                        <article class="card px-8 py-10 flex flex-col gap-4">
-                            <div class="w-5 h-5 text-brand-primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-medium text-brand-primary leading-normal tracking-tight">
-                                24/7 support
-                            </h3>
-                            <p class="text-base font-normal text-stone-300 leading-normal">
-                                Our team is always available to help. Get answers when you need them, day or night.
-                            </p>
-                        </article>
-
-                    </div>
-
-                    <!-- Stats Grid -->
-                    <dl class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-                        <!-- Stat 1 -->
-                        <div class="card px-6 py-8">
-                            <dt class="text-5xl md:text-6xl font-light text-brand-primary tracking-tight mb-3">10K+</dt>
-                            <dd class="text-sm text-stone-300 leading-relaxed">Active users worldwide</dd>
-                        </div>
-                        <!-- Stat 2 -->
-                        <div class="card px-6 py-8">
-                            <dt class="text-5xl md:text-6xl font-light text-brand-primary tracking-tight mb-3">99.9%</dt>
-                            <dd class="text-sm text-stone-300 leading-relaxed">Uptime guarantee</dd>
-                        </div>
-                        <!-- Stat 3 -->
-                        <div class="card px-6 py-8">
-                            <dt class="text-5xl md:text-6xl font-light text-brand-primary tracking-tight mb-3">50+</dt>
-                            <dd class="text-sm text-stone-300 leading-relaxed">Integrations available</dd>
-                        </div>
-                        <!-- Stat 4 -->
-                        <div class="card px-6 py-8">
-                            <dt class="text-5xl md:text-6xl font-light text-brand-primary tracking-tight mb-3">4.9</dt>
-                            <dd class="text-sm text-stone-300 leading-relaxed">Average customer rating</dd>
-                        </div>
-                    </dl>
-
                 </div>
             </section>
 
@@ -640,7 +561,7 @@
                     <!-- CTA Button -->
                     <a href="#" class="btn-primary">
                         <img src="images/avatar.webp" alt="Avatar" class="w-6 h-6 rounded-full">
-                        <span class="font-medium text-sm text-white leading-none">Start Free Trial &rarr;</span>
+                        <span class="font-medium text-sm leading-none">Start Free Trial &rarr;</span>
                     </a>
 
                     <!-- Email Link -->

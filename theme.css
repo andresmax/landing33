@@ -5,26 +5,31 @@
 
 :root {
   /* Brand colors - change these per product */
-  --brand-primary: #ff2d55;
-  --brand-hover: #ff4d73;
+  --brand-primary: #4a7a96;
+  --brand-hover: #3d6a84;
 
   /* Background colors */
-  --surface-dark: #080B0C;
-  --surface-footer: #101618;
-  --surface-divider: #302432;
+  --surface-dark: #407698;
+  --surface-footer: #3a6a89;
+  --surface-divider: #5a8ab0;
 
-  /* Text colors (stone scale) */
-  --text-primary: #e7e5e4;     /* Primary text - headings, important content */
-  --text-secondary: #d6d3d1;   /* Secondary text - body copy */
-  --text-muted: #a8a29e;       /* Muted text - less important info */
-  --text-subtle: #78716c;      /* Subtle text - metadata, captions */
+  /* Text colors */
+  --text-primary: #ffffff;     /* Primary text - headings, important content */
+  --text-secondary: #ffffff;   /* Secondary text - body copy */
+  --text-muted: rgba(255, 255, 255, 0.8);       /* Muted text - less important info */
+  --text-subtle: rgba(255, 255, 255, 0.6);      /* Subtle text - metadata, captions */
 
   /* Card/glass effect colors */
   --card-bg: rgba(255, 255, 255, 0.06);
   --card-border: rgba(255, 255, 255, 0.07);
   --card-border-hover: rgba(255, 255, 255, 0.15);
-  --glass-bg: rgba(150, 153, 138, 0.15);
-  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-bg: rgba(180, 200, 215, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.2);
+
+  /* Nav button */
+  --nav-button-bg: rgba(255, 255, 255, 0.95);
+  --nav-button-hover: rgba(255, 255, 255, 1);
+  --nav-button-text: var(--brand-primary);
 
   /* Status colors */
   --status-available: #4ade80;  /* Green for "available" badge */
