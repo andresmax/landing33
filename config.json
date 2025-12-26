@@ -1,0 +1,36 @@
+{
+  "site": {
+    "title": "Product Name",
+    "tagline": "Your tagline here",
+    "description": "Your product description goes here. Keep it under 160 characters for best SEO results.",
+    "url": "https://yourproduct.com",
+    "contactEmail": "hello@yourproduct.com",
+    "ogImage": "images/og-image.png",
+    "themeColor": "#2a789b"
+  },
+  "analytics": {
+    "plausibleDomain": ""
+  },
+  "cta": {
+    "primaryUrl": "#",
+    "primaryText": "Get Started →",
+    "navButtonText": "Get Started"
+  },
+  "social": {
+    "twitter": "https://x.com/andresmax",
+    "instagram": "https://www.instagram.com/andresmax",
+    "linkedin": "https://www.linkedin.com/in/andresmax"
+  },
+  "legal": {
+    "privacyUrl": "privacy.html",
+    "termsUrl": "terms.html"
+  },
+  "footer": {
+    "copyrightYear": "2025",
+    "companyName": "Your Company",
+    "badgeText": "Join the awesome"
+  },
+  "forms": {
+    "emailAction": "#"
+  }
+}

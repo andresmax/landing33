@@ -1,6 +1,6 @@
 # SaaS Landing Page Template
 
-A clean, dark-themed landing page template for SaaS products. Based on the mxworks design language.
+A clean, customizable landing page template for SaaS products. Uses CSS variables for easy theming and a simple config file for all customizable content.
 
 ## Quick Start
 
@@ -21,142 +21,193 @@ Then open `index.html` in your browser.
 
 ```
 saas-template/
-├── index.html          # Main landing page (edit copy here)
-├── theme.css           # CSS variables (edit colors here)
-├── styles.css          # Compiled output (auto-generated)
-├── package.json        # Dependencies and scripts
-├── tailwind.config.js  # Tailwind configuration
+├── config.json          # Site configuration (edit this first!)
+├── netlify.toml         # Netlify deployment config
+├── build.js             # Template build script
+├── package.json         # Dependencies and scripts
+├── tailwind.config.js   # Tailwind configuration
+├── theme.css            # CSS variables (edit colors here)
 ├── src/
-│   └── input.css       # Source CSS with Tailwind directives
-└── images/
-    ├── hero.webp           # Header background
-    ├── footer.webp         # Footer background
-    ├── product.webp        # Product showcase image
-    ├── logo.svg            # Navigation logo
-    ├── avatar.webp         # CTA button avatar
-    ├── feature-1.webp      # Feature screenshot 1
-    ├── feature-2.webp      # Feature screenshot 2
-    ├── feature-3.webp      # Feature screenshot 3
-    ├── feature-4.webp      # Feature screenshot 4
-    ├── integration-*.svg   # Integration logos
-    ├── testimonial-*.webp  # Testimonial avatars
-    └── favicon.ico         # Browser favicon
+│   ├── template.html    # Main page template
+│   ├── privacy.html     # Privacy policy template
+│   ├── terms.html       # Terms of service template
+│   ├── sitemap.xml      # Sitemap template
+│   ├── robots.txt       # Robots.txt template
+│   └── input.css        # Source CSS with Tailwind directives
+├── images/
+│   ├── headerbg.png     # Header background
+│   ├── footerbg.png     # Footer background
+│   ├── product.webp     # Product showcase image
+│   ├── og-image.png     # Social sharing image (1200x630)
+│   ├── favicon.ico      # Browser favicon
+│   ├── apple-touch-icon.png  # iOS icon
+│   ├── feature-*.webp   # Feature screenshots
+│   ├── integration-*.svg    # Integration logos
+│   └── testimonial-*.webp   # Testimonial avatars
+└── [generated files]
+    ├── index.html       # Built landing page
+    ├── privacy.html     # Built privacy policy
+    ├── terms.html       # Built terms of service
+    ├── sitemap.xml      # Built sitemap
+    ├── robots.txt       # Built robots.txt
+    └── styles.css       # Compiled CSS
 ```
 
-## Customization
+## Configuration
 
-### Colors
+Edit `config.json` to customize your site:
+
+```json
+{
+  "site": {
+    "title": "Product Name",
+    "tagline": "Your tagline here",
+    "description": "Your product description for SEO (under 160 chars)",
+    "url": "https://yourproduct.com",
+    "contactEmail": "hello@yourproduct.com",
+    "ogImage": "images/og-image.png",
+    "themeColor": "#2a789b"
+  },
+  "analytics": {
+    "plausibleDomain": "yourproduct.com"
+  },
+  "cta": {
+    "primaryUrl": "https://app.yourproduct.com/signup",
+    "primaryText": "Get Started →",
+    "navButtonText": "Get Started"
+  },
+  "social": {
+    "twitter": "yourhandle",
+    "instagram": "yourhandle",
+    "linkedin": "yourcompany"
+  },
+  "legal": {
+    "privacyUrl": "privacy.html",
+    "termsUrl": "terms.html"
+  },
+  "footer": {
+    "copyrightYear": "2025",
+    "companyName": "Your Company",
+    "badgeText": "Available for work"
+  },
+  "forms": {
+    "emailAction": "https://your-form-handler.com/subscribe"
+  }
+}
+```
+
+The build script replaces `{{key}}` placeholders in templates with config values. Run `npm run dev` to auto-rebuild on changes.
+
+## Colors
 
 Edit `theme.css` to change the color scheme:
 
 ```css
 :root {
   /* Brand colors */
-  --brand-primary: #ff2d55;    /* Main accent color */
-  --brand-hover: #ff4d73;      /* Hover state */
+  --brand-primary: #2a789b;
+  --brand-hover: #3a8aab;
 
   /* Background colors */
-  --surface-dark: #080B0C;     /* Main background */
-  --surface-footer: #101618;   /* Footer/alternate sections */
+  --surface-dark: #0a1a1f;
 
   /* Text colors */
-  --text-primary: #e7e5e4;     /* Headings */
-  --text-secondary: #d6d3d1;   /* Body text */
-  --text-muted: #a8a29e;       /* Secondary text */
-  --text-subtle: #78716c;      /* Captions, metadata */
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --text-muted: rgba(255, 255, 255, 0.8);
+  --text-subtle: rgba(255, 255, 255, 0.6);
 }
 ```
 
-### Images to Replace
+## Images to Replace
 
 | Image | Size | Description |
 |-------|------|-------------|
-| `hero.webp` | 1920x1080+ | Header background |
-| `footer.webp` | 1920x1080+ | Footer background |
-| `product.webp` | 1200x800+ | Product/dashboard screenshot |
-| `logo.svg` | Any | Your product logo |
-| `avatar.webp` | 48x48 | CTA button avatar |
+| `headerbg.png` | 1920x1080+ | Header background |
+| `footerbg.png` | 1920x1080+ | Footer background |
+| `product.webp` | 1200x800+ | Product screenshot |
+| `og-image.png` | 1200x630 | Social sharing image |
+| `favicon.ico` | 32x32 | Browser favicon |
+| `apple-touch-icon.png` | 180x180 | iOS home screen icon |
 | `feature-*.webp` | 800x600+ | Feature screenshots |
 | `testimonial-*.webp` | 96x96 | Customer avatars |
 | `integration-*.svg` | Any | Partner/integration logos |
 
-### Sections
+## Sections
 
-The template includes these sections:
-
-1. **Hero** - Main headline, subtext, CTA
+1. **Hero** - Headline, subtext, CTA button
 2. **Integrations** - Partner/tech logos
-3. **Features** - 4-card grid with hover effects
-4. **Pricing** - 3-tier pricing cards
-5. **Product Showcase** - Full-width product image
-6. **Why Choose Us** - 4 benefit cards + stats
+3. **Why Choose Us** - Benefits and description
+4. **Feature Grid** - Feature cards with icons
+5. **Screenshot** - Full-width product screenshot
+6. **Pricing** - Pricing tiers
 7. **Testimonials** - Customer quotes
 8. **FAQ** - Expandable accordion
-9. **Footer CTA** - Final conversion section
+9. **Footer** - CTA, social links, email signup, legal links
 
-## Multiple Products
+## SEO
 
-This template uses a branch-per-product workflow:
+The template includes:
 
-```bash
-# Create new product landing page
-git checkout -b product-name
+- Meta description and Open Graph tags
+- Twitter card tags
+- Canonical URLs
+- JSON-LD structured data (SoftwareApplication schema)
+- `sitemap.xml` for search engines
+- `robots.txt` allowing all crawlers
 
-# Customize for this product
-# - Edit theme.css colors
-# - Replace images
-# - Update copy in index.html
-
-# Deploy this branch
-git push origin product-name
-```
-
-Each branch can be deployed separately on Netlify/Vercel.
+All SEO values are pulled from `config.json`.
 
 ## Deployment
 
-### Netlify
+### Netlify (recommended)
+
+The repo includes `netlify.toml` with build settings and security headers.
 
 1. Push to GitHub
 2. Connect repo to Netlify
-3. Set branch to deploy
-4. Done!
+3. Deploy (build command and publish dir are pre-configured)
 
 ### Vercel
 
 1. Push to GitHub
 2. Import to Vercel
-3. Select branch
-4. Deploy!
+3. Set build command: `npm run build`
+4. Set output directory: `.`
 
 ### Manual
 
-Just upload the files to any static hosting provider.
+Run `npm run build` and upload all files to any static host.
 
-## Design Elements
+## Multiple Products
 
-The template preserves these design patterns:
+Use a branch-per-product workflow:
 
-- **Glass morphism navigation** with gradient border
-- **Header/footer background images** with gradient overlays
-- **Card components** with subtle borders and backdrop blur
-- **FAQ accordion** with smooth animations
-- **Mobile menu** with slide animation
-- **Smooth hover transitions** throughout
+```bash
+git checkout -b product-name
 
-## Typography
+# Customize:
+# - Edit config.json
+# - Edit theme.css colors
+# - Replace images
 
-Uses [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) from Google Fonts:
-- Light (300) for body text
-- Regular (400) for general text
-- Medium (500) for subheadings
-- Semibold (600) for emphasis
+git push origin product-name
+```
+
+Each branch can be deployed separately on Netlify/Vercel.
+
+## Development Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server with auto-rebuild |
+| `npm run build` | Build for production |
+| `npm run build:html` | Rebuild HTML/XML only |
+| `npm run build:css` | Rebuild CSS only |
 
 ## Browser Support
 
-Works in all modern browsers:
-- Chrome, Edge, Firefox, Safari (latest)
-- Mobile browsers (iOS Safari, Chrome for Android)
+Works in all modern browsers: Chrome, Edge, Firefox, Safari (latest versions), iOS Safari, Chrome for Android.
 
 ## Credits
 

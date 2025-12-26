@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "SaaS landing page template with Tailwind CSS",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./styles.css --minify",
+    "build": "node build.js && tailwindcss -i ./src/input.css -o ./styles.css --minify",
+    "build:html": "node build.js",
+    "build:css": "tailwindcss -i ./src/input.css -o ./styles.css --minify",
     "css": "tailwindcss -i ./src/input.css -o ./styles.css --watch",
+    "html": "nodemon --watch src --watch config.json --ext html,json,xml,txt --exec 'node build.js'",
     "serve": "browser-sync start --server --files '*.html, *.css, images/*'",
-    "dev": "concurrently \"npm run css\" \"npm run serve\""
+    "dev": "npm run build:html && concurrently \"npm run html\" \"npm run css\" \"npm run serve\""
   },
   "devDependencies": {
     "browser-sync": "^3.0.4",
     "concurrently": "^9.2.1",
+    "nodemon": "^3.1.11",
     "tailwindcss": "^3.4.18"
   }
 }
