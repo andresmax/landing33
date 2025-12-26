@@ -50,7 +50,8 @@ const templates = [
   { input: 'src/privacy.html', output: 'privacy.html' },
   { input: 'src/terms.html', output: 'terms.html' },
   { input: 'src/sitemap.xml', output: 'sitemap.xml' },
-  { input: 'src/robots.txt', output: 'robots.txt' }
+  { input: 'src/robots.txt', output: 'robots.txt' },
+  { input: 'src/site.webmanifest', output: 'site.webmanifest' }
 ];
 
 templates.forEach(({ input, output }) => {
