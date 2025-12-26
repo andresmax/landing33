@@ -41,12 +41,20 @@ a:visited {
 .btn-hero {
   @apply flex items-center justify-center px-5 py-[18px] rounded-full transition-colors;
   background-color: white;
-  color: #688b9d;
+  color: var(--brand-primary);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-hero span {
+  color: var(--brand-primary);
 }
 
 .btn-hero:hover {
   background-color: var(--brand-primary);
+  color: white;
+}
+
+.btn-hero:hover span {
   color: white;
 }
 

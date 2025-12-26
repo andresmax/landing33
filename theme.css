@@ -5,13 +5,13 @@
 
 :root {
   /* Brand colors - change these per product */
-  --brand-primary: #4a7a96;
-  --brand-hover: #3d6a84;
+  --brand-primary: #2a789b;
+  --brand-hover: #2a789b;
 
   /* Background colors */
-  --surface-dark: #407698;
-  --surface-footer: #3a6a89;
-  --surface-divider: #5a8ab0;
+  --surface-dark: #2a789b;
+  --surface-footer: #2a789b;
+  --surface-divider: #2a789b;
 
   /* Text colors */
   --text-primary: #ffffff;     /* Primary text - headings, important content */
@@ -19,11 +19,11 @@
   --text-muted: rgba(255, 255, 255, 0.8);       /* Muted text - less important info */
   --text-subtle: rgba(255, 255, 255, 0.6);      /* Subtle text - metadata, captions */
 
-  /* Card/glass effect colors */
+  /* Card/glass effect colors - white with opacity */
   --card-bg: rgba(255, 255, 255, 0.06);
   --card-border: rgba(255, 255, 255, 0.07);
   --card-border-hover: rgba(255, 255, 255, 0.15);
-  --glass-bg: rgba(180, 200, 215, 0.35);
+  --glass-bg: rgba(255, 255, 255, 0.1);
   --glass-border: rgba(255, 255, 255, 0.2);
 
   /* Nav button */
