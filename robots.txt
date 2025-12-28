@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourproduct.com/sitemap.xml
+Sitemap: https://gratu.app/sitemap.xml

@@ -1,40 +1,50 @@
 /* ===========================================
-   Theme Configuration
-   Edit these CSS variables to customize your product's colors
+   Theme Configuration - Gratu
+   Forest green + lime accent theme
    =========================================== */
 
 :root {
-  /* Brand colors - change these per product */
-  --brand-primary: #2a789b;
-  --brand-hover: #2a789b;
+  /* Brand colors */
+  --brand-primary: #132417;        /* Dark forest green - main background */
+  --brand-hover: #1a3020;          /* Slightly lighter for hover states */
+  --brand-accent: #b1ec6f;         /* Bright lime green for CTAs */
+  --brand-accent-hover: #9fd95f;   /* Darker lime for hover */
 
   /* Background colors */
-  --surface-dark: #2a789b;
-  --surface-footer: #2a789b;
-  --surface-divider: #2a789b;
+  --surface-dark: #132417;         /* Main background */
+  --surface-footer: #132417;       /* Footer background */
 
   /* Text colors */
-  --text-primary: #ffffff;     /* Primary text - headings, important content */
-  --text-secondary: #ffffff;   /* Secondary text - body copy */
-  --text-muted: rgba(255, 255, 255, 0.8);       /* Muted text - less important info */
-  --text-subtle: rgba(255, 255, 255, 0.6);      /* Subtle text - metadata, captions */
+  --text-primary: #fafbf7;         /* Off-white/cream - primary text */
+  --text-secondary: #f5f5f4;       /* Stone-100 - secondary text */
+  --text-muted: rgba(250, 251, 247, 0.8);   /* Muted text */
+  --text-subtle: rgba(250, 251, 247, 0.6);  /* Subtle text */
+  --text-accent: #05df72;          /* Bright green for badges/accents */
 
-  /* Card/glass effect colors - white with opacity */
+  /* Card/glass effect colors */
   --card-bg: rgba(255, 255, 255, 0.06);
   --card-border: rgba(255, 255, 255, 0.07);
   --card-border-hover: rgba(255, 255, 255, 0.15);
   --glass-bg: rgba(255, 255, 255, 0.1);
   --glass-border: rgba(255, 255, 255, 0.2);
 
-  /* Nav button */
-  --nav-button-bg: rgba(255, 255, 255, 0.95);
-  --nav-button-hover: rgba(255, 255, 255, 1);
-  --nav-button-text: var(--brand-primary);
+  /* Nav pill styling */
+  --nav-bg: rgba(255, 255, 255, 0.28);
+  --nav-border: rgba(255, 255, 255, 0.16);
+
+  /* Nav CTA button */
+  --nav-button-bg: #fafbf7;        /* Off-white/cream */
+  --nav-button-hover: #f0f0ec;     /* Slightly darker on hover */
+  --nav-button-text: #132417;      /* Dark green text */
+
+  /* Secondary button (Get Updates) */
+  --button-secondary-bg: #fafbf7;
+  --button-secondary-text: #132417;
 
   /* Status colors */
-  --status-available: #4ade80;  /* Green for "available" badge */
+  --status-available: #05df72;     /* Bright green for badges */
 
   /* Selection color */
-  --selection-bg: var(--brand-primary);
-  --selection-text: white;
+  --selection-bg: var(--brand-accent);
+  --selection-text: var(--brand-primary);
 }

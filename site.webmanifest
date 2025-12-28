@@ -1,6 +1,6 @@
 {
-  "name": "Product Name",
-  "short_name": "Product Name",
+  "name": "gratu.",
+  "short_name": "gratu.",
   "icons": [
     {
       "src": "images/icon-192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#2a789b",
-  "background_color": "#2a789b",
+  "theme_color": "#132417",
+  "background_color": "#132417",
   "display": "standalone"
 }

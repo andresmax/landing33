@@ -74,12 +74,12 @@ a:visited {
 /* Nav Button */
 .nav-button {
   background-color: var(--nav-button-bg);
-  color: var(--nav-button-text);
+  color: var(--nav-button-text) !important;
 }
 
 .nav-button:hover {
   background-color: var(--brand-primary);
-  color: white;
+  color: white !important;
 }
 
 .nav-glass::before {

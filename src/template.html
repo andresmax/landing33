@@ -31,12 +31,12 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
+        "@type": "MobileApplication",
         "name": "{{site.title}}",
         "description": "{{site.description}}",
         "url": "{{site.url}}",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "iOS",
         "offers": {
             "@type": "Offer",
             "price": "0",
@@ -53,7 +53,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
@@ -75,7 +75,7 @@
 </head>
 
 <body class="font-sans font-regular text-stone-200 bg-surface-dark">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-primary focus:text-white focus:rounded">Skip to content</a>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-primary focus:text-cream focus:rounded">Skip to content</a>
 
     <!-- Page container with dark background -->
     <div class="relative w-full min-h-screen">
@@ -91,31 +91,26 @@
 
                 <!-- Navigation -->
                 <header class="fixed top-0 left-0 right-0 z-50 py-4" role="banner">
-                    <nav class="max-w-xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12 relative" role="navigation" aria-label="Main navigation">
+                    <nav class="max-w-md mx-auto px-6 sm:px-6 md:px-8 lg:px-12 relative" role="navigation" aria-label="Main navigation">
                         <div id="nav-bar" class="nav-glass flex items-center justify-between pl-5 pr-1.5 py-1.5 sm:cursor-default cursor-pointer">
                             <!-- Left: Logo -->
                             <div class="flex-shrink-0 relative z-10">
                                 <a href="/" class="block" aria-label="Home">
-                                    <!-- Logo -->
-                                    <svg class="h-4 w-auto" viewBox="0 0 39 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M25.4004 17H21.9963L13.5702 3.87775L6.11917 14.1887H16.1048L18.2348 16.9183H0L12.9012 8.2349e-06H14.4843L25.4004 17Z" fill="white"/>
-                                        <path d="M32.2171 17H28.7547L17.6783 8.2349e-06H21.1407L26.6789 8.5L32.2171 17Z" fill="white"/>
-                                        <path d="M39 17H35.5376L24.4612 0H27.9236L33.4618 8.5L39 17Z" fill="white"/>
-                                    </svg>
+                                    <img src="images/logo.svg" alt="gratu." class="h-6 w-auto">
                                 </a>
                             </div>
 
                             <!-- Center: Navigation Links (hidden on mobile) -->
                             <div class="hidden sm:flex items-center gap-3 font-medium text-sm text-stone-300">
-                                <a href="#features" class="hover:text-brand-primary transition-colors">Features</a>
-                                <a href="#pricing" class="hover:text-brand-primary transition-colors">Pricing</a>
-                                <a href="#testimonials" class="hover:text-brand-primary transition-colors">Testimonials</a>
-                                <a href="#faq" class="hover:text-brand-primary transition-colors">FAQ</a>
+                                <a href="#features" class="hover:text-cream transition-colors">Features</a>
+                                <a href="#testimonials" class="hover:text-cream transition-colors">Reviews</a>
+                                <a href="#faq" class="hover:text-cream transition-colors">FAQ</a>
                             </div>
 
                             <!-- Right: CTA Button (hidden on mobile) -->
-                            <a href="{{cta.primaryUrl}}" class="hidden sm:block flex-shrink-0 nav-button text-xs font-medium px-3 py-2.5 rounded-full transition-colors">
-                                {{cta.navButtonText}}
+                            <a href="{{cta.primaryUrl}}" class="hidden sm:flex items-center gap-1.5 flex-shrink-0 nav-button text-xs font-medium px-3 py-2.5 rounded-full transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                                Download
                             </a>
 
                             <!-- Mobile: Hamburger Icon (visible only on mobile) -->
@@ -133,12 +128,12 @@
 
                         <!-- Mobile Menu Dropdown (hidden by default) -->
                         <div id="mobile-menu" class="mobile-menu-closed sm:hidden absolute left-0 right-0 mt-2 nav-glass p-4 flex flex-col gap-3">
-                            <a href="#features" class="mobile-nav-link text-stone-300 hover:text-brand-primary transition-colors font-medium text-sm py-2">Features</a>
-                            <a href="#pricing" class="mobile-nav-link text-stone-300 hover:text-brand-primary transition-colors font-medium text-sm py-2">Pricing</a>
-                            <a href="#testimonials" class="mobile-nav-link text-stone-300 hover:text-brand-primary transition-colors font-medium text-sm py-2">Testimonials</a>
-                            <a href="#faq" class="mobile-nav-link text-stone-300 hover:text-brand-primary transition-colors font-medium text-sm py-2">FAQ</a>
-                            <a href="{{cta.primaryUrl}}" class="mobile-nav-link bg-white/20 hover:bg-brand-primary text-white text-xs font-medium px-4 py-3 rounded-full transition-colors text-center mt-2">
-                                {{cta.primaryText}}
+                            <a href="#features" class="mobile-nav-link text-stone-300 hover:text-cream transition-colors font-medium text-sm py-2">Features</a>
+                            <a href="#testimonials" class="mobile-nav-link text-stone-300 hover:text-cream transition-colors font-medium text-sm py-2">Reviews</a>
+                            <a href="#faq" class="mobile-nav-link text-stone-300 hover:text-cream transition-colors font-medium text-sm py-2">FAQ</a>
+                            <a href="{{cta.primaryUrl}}" class="mobile-nav-link nav-button flex items-center justify-center gap-1 text-xs font-medium px-4 py-3 rounded-full transition-colors text-center mt-2">
+                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                                Download
                             </a>
                         </div>
                     </nav>
@@ -153,25 +148,24 @@
                             <div class="flex flex-col gap-3.5 items-center justify-center w-full">
 
                                 <!-- Main Headline -->
-                                <h1 class="font-medium text-4xl md:text-[56px] text-white leading-none tracking-[-0.05em]">
-                                    Your life, made easier.
+                                <h1 class="font-medium text-4xl md:text-[56px] text-cream leading-[1] tracking-[-0.05em] max-w-xl">
+                                    Find peace and calm,<br>one gratitude a day.
                                 </h1>
 
                                 <!-- Supporting Text -->
                                 <div class="max-w-[487px]">
-                                    <p class="font-normal text-[17px] text-white leading-relaxed tracking-tight">The AI-native code editor that gets it exactly right. No approximation. No bloat. Just perfect code, every time.</p>
+                                    <p class="font-normal text-lg text-cream leading-relaxed tracking-tight">A beautiful journaling app to help you slow down, reflect, and find joy in everyday moments.</p>
                                 </div>
 
                             </div>
 
-                            <!-- CTA Button -->
-                            <a href="{{cta.primaryUrl}}" class="btn-hero">
-                                <span class="font-bold text-[13px] leading-none">{{cta.primaryText}}</span>
+                            <!-- App Store Button -->
+                            <a href="{{cta.primaryUrl}}" class="inline-block hover:opacity-90 transition-opacity">
+                                <img src="images/appstore.png" alt="Download on the App Store" class="h-[52px]">
                             </a>
 
-                            <!-- G2 Reviews Badge -->
-                            <div class="flex items-center gap-2 text-[13px] text-white font-medium">
-                                <span>G2</span>
+                            <!-- Loved by journalers Badge -->
+                            <div class="flex items-center gap-2 text-[13px] text-cream font-medium">
                                 <div class="flex -space-x-0.5 -translate-y-px">
                                     <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                     <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -179,34 +173,29 @@
                                     <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                     <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                 </div>
-                                <span>133+ Reviews</span>
+                                <span>Loved by journalers everywhere</span>
                             </div>
 
-                            <!-- Hero Image -->
-                            <div class="w-full max-w-[980px] mt-20 p-2.5 rounded-2xl backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl">
-                                <img src="images/heroimage.png" alt="Product screenshot" class="w-full h-auto rounded-xl">
+                            <!-- Hero Image - 3 Phone Mockups -->
+                            <div class="w-full max-w-[980px] mt-20 flex items-center justify-center gap-4 md:gap-8">
+                                <!-- Left Phone -->
+                                <div class="hidden sm:block w-[200px] md:w-[267px] p-1.5 rounded-[20px] backdrop-blur-sm bg-white/10 border border-white/20 shadow-2xl">
+                                    <img src="images/shot1.png" alt="Gratu app screenshot" class="w-full h-auto rounded-[16px]">
+                                </div>
+                                <!-- Center Phone (taller) -->
+                                <div class="w-[240px] md:w-[310px] p-1.5 rounded-[20px] backdrop-blur-sm bg-white/10 border border-white/20 shadow-2xl">
+                                    <img src="images/shot2.png" alt="Gratu app screenshot" class="w-full h-auto rounded-[16px]">
+                                </div>
+                                <!-- Right Phone -->
+                                <div class="hidden sm:block w-[200px] md:w-[267px] p-1.5 rounded-[20px] backdrop-blur-sm bg-white/10 border border-white/20 shadow-2xl">
+                                    <img src="images/shot3.png" alt="Gratu app screenshot" class="w-full h-auto rounded-[16px]">
+                                </div>
                             </div>
 
                         </div>
                     </div>
                 </section>
             </div>
-
-            <!-- Integrations/Tech Stack Section -->
-            <section class="relative z-0 pb-32" aria-label="Integrations">
-                <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
-                    <div class="flex flex-col gap-5 items-center text-center">
-                        <p class="text-base text-white tracking-tight">Integrates with your workflow</p>
-                        <ul class="flex flex-wrap justify-center gap-6 items-center list-none p-0 m-0">
-                            <li><img src="images/logo-openai.svg" alt="OpenAI" class="h-6 w-auto"></li>
-                            <li><img src="images/logo-cursor.svg" alt="Cursor" class="h-6 w-auto"></li>
-                            <li><img src="images/logo-anthropic.svg" alt="Anthropic" class="h-3.5 w-auto"></li>
-                            <li><img src="images/logo-n8n.svg" alt="n8n" class="h-5 w-auto"></li>
-                            <li><img src="images/logo-gemini.svg" alt="Gemini" class="h-5 w-auto"></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
 
             <!-- Features Section -->
             <section id="features" class="relative z-0 pb-32" aria-labelledby="features-heading">
@@ -218,37 +207,37 @@
 
                         <!-- Feature Card 1 -->
                         <article class="card overflow-hidden">
-                            <img src="images/headerbg.png" alt="AI MVP Development" class="w-full h-64 md:h-80 object-cover rounded-t-lg">
+                            <img src="images/feature-1.png" alt="Daily gratitude ritual" class="w-full h-64 md:h-80 object-cover rounded-t-lg">
                             <div class="p-8 pt-10">
-                                <h3 class="text-[22px] font-medium text-white tracking-tight mb-4">AI MVP Development</h3>
-                                <p class="text-base text-white leading-relaxed">For startups we believe in, we go all-in. Reduced retainer, shared equity, long-term commitment. We work closely with founders to shape product strategy and build what matters.</p>
+                                <h3 class="text-[22px] font-medium text-cream tracking-tight mb-4">Make gratitude your daily ritual</h3>
+                                <p class="text-base text-cream leading-relaxed">Start each day with intention or end it with reflection. Gentle reminders help you show up for yourself, one moment at a time. Small actions, lasting change.</p>
                             </div>
                         </article>
 
                         <!-- Feature Card 2 -->
                         <article class="card overflow-hidden">
-                            <img src="images/headerbg.png" alt="AI MVP Development" class="w-full h-64 md:h-80 object-cover rounded-t-lg">
+                            <img src="images/feature-2.png" alt="Preserve each thought" class="w-full h-64 md:h-80 object-cover rounded-t-lg">
                             <div class="p-8 pt-10">
-                                <h3 class="text-[22px] font-medium text-white tracking-tight mb-4">AI MVP Development</h3>
-                                <p class="text-base text-white leading-relaxed">For startups we believe in, we go all-in. Reduced retainer, shared equity, long-term commitment. We work closely with founders to shape product strategy and build what matters.</p>
+                                <h3 class="text-[22px] font-medium text-cream tracking-tight mb-4">Preserve each thought</h3>
+                                <p class="text-base text-cream leading-relaxed">Capture moments of gratitude as they happen. Your journal becomes a personal treasure trove of positivity, ready to revisit whenever you need a boost.</p>
                             </div>
                         </article>
 
                         <!-- Feature Card 3 -->
                         <article class="card overflow-hidden">
-                            <img src="images/headerbg.png" alt="AI MVP Development" class="w-full h-64 md:h-80 object-cover rounded-t-lg">
+                            <img src="images/feature-3.png" alt="See how far you've come" class="w-full h-64 md:h-80 object-cover rounded-t-lg">
                             <div class="p-8 pt-10">
-                                <h3 class="text-[22px] font-medium text-white tracking-tight mb-4">AI MVP Development</h3>
-                                <p class="text-base text-white leading-relaxed">For startups we believe in, we go all-in. Reduced retainer, shared equity, long-term commitment. We work closely with founders to shape product strategy and build what matters.</p>
+                                <h3 class="text-[22px] font-medium text-cream tracking-tight mb-4">See how far you've come</h3>
+                                <p class="text-base text-cream leading-relaxed">Track your journey with a beautiful timeline of gratitude. Look back on moments that shaped you and watch your practice grow over time.</p>
                             </div>
                         </article>
 
                         <!-- Feature Card 4 -->
                         <article class="card overflow-hidden">
-                            <img src="images/headerbg.png" alt="AI MVP Development" class="w-full h-64 md:h-80 object-cover rounded-t-lg">
+                            <img src="images/feature-4.png" alt="Challenge yourself to grow" class="w-full h-64 md:h-80 object-cover rounded-t-lg">
                             <div class="p-8 pt-10">
-                                <h3 class="text-[22px] font-medium text-white tracking-tight mb-4">AI MVP Development</h3>
-                                <p class="text-base text-white leading-relaxed">For startups we believe in, we go all-in. Reduced retainer, shared equity, long-term commitment. We work closely with founders to shape product strategy and build what matters.</p>
+                                <h3 class="text-[22px] font-medium text-cream tracking-tight mb-4">Challenge yourself to grow</h3>
+                                <p class="text-base text-cream leading-relaxed">Build momentum with 7-day or 30-day gratitude journeys. Push past resistance, form lasting habits, and unlock content within the app.</p>
                             </div>
                         </article>
 
@@ -256,18 +245,18 @@
                 </div>
             </section>
 
-            <!-- Why Section -->
+            <!-- Peace of Mind Section -->
             <section class="relative z-0 pb-32" aria-labelledby="why-heading">
                 <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
                     <div class="flex flex-col gap-7 items-start max-w-xl">
-                        <h2 id="why-heading" class="text-2xl font-medium text-white leading-relaxed tracking-tight">
-                            Why choose us?
+                        <h2 id="why-heading" class="text-2xl font-medium text-cream leading-relaxed tracking-tight">
+                            Your peace of mind starts today
                         </h2>
                         <p class="text-[22px] font-normal text-stone-100 leading-relaxed tracking-tight">
-                            Building with AI is exciting, but most teams hit the same roadblocks: it takes too long to hire the right people, projects stall before they launch.
+                            Join thousands finding clarity through gratitude. Free to start—with everything you need to build a practice that lasts.
                         </p>
-                        <a href="#cta" class="btn-hero">
-                            <span class="font-bold text-[13px] leading-none">Get Started &rarr;</span>
+                        <a href="{{cta.primaryUrl}}" class="inline-block hover:opacity-90 transition-opacity">
+                            <img src="images/appstore.svg" alt="Download on the App Store" class="h-[44px]">
                         </a>
                     </div>
                 </div>
@@ -281,69 +270,69 @@
                     <!-- 3x2 Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-                        <!-- Feature 1 -->
+                        <!-- Feature 1: Private & Protected -->
                         <article class="card px-[30px] py-[41px]">
                             <div class="flex flex-col gap-[18px]">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32-3.87-3.77 5.34-.78L10 1z"/>
+                                <svg class="w-5 h-5 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                                 </svg>
-                                <h3 class="text-[20px] font-medium text-stone-100 leading-normal tracking-tight">AI MVP Development</h3>
-                                <p class="text-base font-normal text-white leading-normal">From idea to working product in 8-12 weeks. Test your concept fast without hiring a full team.</p>
+                                <h3 class="text-[20px] font-medium text-stone-100 leading-normal tracking-tight">Private & Protected</h3>
+                                <p class="text-base font-normal text-cream leading-normal">Your thoughts stay yours. Protected by Face ID, data stays on your devices. Never on servers.</p>
                             </div>
                         </article>
 
-                        <!-- Feature 2 -->
+                        <!-- Feature 2: Gentle Daily Reminders -->
                         <article class="card px-[30px] py-[41px]">
                             <div class="flex flex-col gap-[18px]">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32-3.87-3.77 5.34-.78L10 1z"/>
+                                <svg class="w-5 h-5 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
                                 </svg>
-                                <h3 class="text-[20px] font-medium text-stone-100 leading-normal tracking-tight">AI MVP Development</h3>
-                                <p class="text-base font-normal text-white leading-normal">From idea to working product in 8-12 weeks. Test your concept fast without hiring a full team.</p>
+                                <h3 class="text-[20px] font-medium text-stone-100 leading-normal tracking-tight">Gentle Daily Reminders</h3>
+                                <p class="text-base font-normal text-cream leading-normal">Choose your perfect time to reflect. A quiet nudge helps you stay on track without feeling rushed.</p>
                             </div>
                         </article>
 
-                        <!-- Feature 3 -->
+                        <!-- Feature 3: Seamless Sync -->
                         <article class="card px-[30px] py-[41px]">
                             <div class="flex flex-col gap-[18px]">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32-3.87-3.77 5.34-.78L10 1z"/>
+                                <svg class="w-5 h-5 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
                                 </svg>
-                                <h3 class="text-[20px] font-medium text-stone-100 leading-normal tracking-tight">AI MVP Development</h3>
-                                <p class="text-base font-normal text-white leading-normal">From idea to working product in 8-12 weeks. Test your concept fast without hiring a full team.</p>
+                                <h3 class="text-[20px] font-medium text-stone-100 leading-normal tracking-tight">Seamless Sync</h3>
+                                <p class="text-base font-normal text-cream leading-normal">Your gratitude follows you everywhere. Sync your journal securely with all your Apple devices with iCloud.</p>
                             </div>
                         </article>
 
-                        <!-- Feature 4 -->
+                        <!-- Feature 4: Thoughtful Prompts -->
                         <article class="card px-[30px] py-[41px]">
                             <div class="flex flex-col gap-[18px]">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32-3.87-3.77 5.34-.78L10 1z"/>
+                                <svg class="w-5 h-5 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                                 </svg>
-                                <h3 class="text-[20px] font-medium text-stone-100 leading-normal tracking-tight">AI MVP Development</h3>
-                                <p class="text-base font-normal text-white leading-normal">From idea to working product in 8-12 weeks. Test your concept fast without hiring a full team.</p>
+                                <h3 class="text-[20px] font-medium text-stone-100 leading-normal tracking-tight">Thoughtful Prompts</h3>
+                                <p class="text-base font-normal text-cream leading-normal">Never stare at a blank page. Thoughtful guided questions help you reflect and unlock meaningful reflections.</p>
                             </div>
                         </article>
 
-                        <!-- Feature 5 -->
+                        <!-- Feature 5: Beautiful Dark Mode -->
                         <article class="card px-[30px] py-[41px]">
                             <div class="flex flex-col gap-[18px]">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32-3.87-3.77 5.34-.78L10 1z"/>
+                                <svg class="w-5 h-5 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
                                 </svg>
-                                <h3 class="text-[20px] font-medium text-stone-100 leading-normal tracking-tight">AI MVP Development</h3>
-                                <p class="text-base font-normal text-white leading-normal">From idea to working product in 8-12 weeks. Test your concept fast without hiring a full team.</p>
+                                <h3 class="text-[20px] font-medium text-stone-100 leading-normal tracking-tight">Beautiful Dark Mode</h3>
+                                <p class="text-base font-normal text-cream leading-normal">Journal seamlessly any time of day. A stunning dark mode makes reflection feel calm no matter your surroundings.</p>
                             </div>
                         </article>
 
-                        <!-- Feature 6 -->
+                        <!-- Feature 6: Zero Tracking -->
                         <article class="card px-[30px] py-[41px]">
                             <div class="flex flex-col gap-[18px]">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32-3.87-3.77 5.34-.78L10 1z"/>
+                                <svg class="w-5 h-5 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                                 </svg>
-                                <h3 class="text-[20px] font-medium text-stone-100 leading-normal tracking-tight">AI MVP Development</h3>
-                                <p class="text-base font-normal text-white leading-normal">From idea to working product in 8-12 weeks. Test your concept fast without hiring a full team.</p>
+                                <h3 class="text-[20px] font-medium text-stone-100 leading-normal tracking-tight">Zero Tracking</h3>
+                                <p class="text-base font-normal text-cream leading-normal">No ads, no analytics, no data collection. Your gratitude practice stays completely private, always.</p>
                             </div>
                         </article>
 
@@ -351,96 +340,13 @@
                 </div>
             </section>
 
-            <!-- Screenshot Section -->
-            <section class="relative z-0 pb-32" aria-label="Product screenshot">
+            <!-- Landscape Gallery Section -->
+            <section class="relative z-0 pb-32" aria-label="Landscape gallery">
                 <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
-                    <img src="images/headerbg.png" alt="Product screenshot" class="w-full h-[500px] object-cover rounded-2xl">
-                </div>
-            </section>
-
-            <!-- Pricing Section -->
-            <section id="pricing" class="relative z-0 pb-32" aria-labelledby="pricing-heading">
-                <div class="max-w-7xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12">
-
-                    <!-- Section Header -->
-                    <div class="flex flex-col gap-8 items-center text-center mb-16">
-                        <h2 id="pricing-heading" class="text-2xl font-medium text-white leading-normal tracking-tight">
-                            Pricing
-                        </h2>
-                        <p class="text-[22px] font-normal text-stone-100 leading-normal tracking-tight max-w-xl">
-                            Building with AI is exciting, but most teams hit the same roadblocks: it takes too long to hire the right people, projects stall before they launch.
-                        </p>
-                    </div>
-
-                    <!-- Pricing Cards -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
-                        <!-- Basic Plan -->
-                        <article class="card px-[30px] py-8 flex flex-col gap-[18px]">
-                            <h3 class="text-2xl font-medium text-stone-100 leading-normal tracking-tight">Basics</h3>
-                            <p class="font-medium text-stone-100">
-                                <span class="text-[32px]">$9</span><span class="text-base">/month</span>
-                            </p>
-                            <p class="text-base font-normal text-white/80 leading-normal">
-                                From idea to working product in 8-12 weeks. Test your concept fast without hiring a full team.
-                            </p>
-                            <ul class="list-disc list-outside pl-6 text-base text-white/80 leading-relaxed">
-                                <li>AI Product strategy</li>
-                                <li>Product Innovation</li>
-                                <li>UX research & flows</li>
-                                <li>UI design & systems</li>
-                                <li>Prototyping & validation</li>
-                                <li>Ongoing iterations</li>
-                            </ul>
-                            <a href="{{cta.primaryUrl}}" class="btn-hero self-start mt-2">
-                                <span class="font-bold text-[13px] leading-none">{{cta.primaryText}}</span>
-                            </a>
-                        </article>
-
-                        <!-- Pro Plan -->
-                        <article class="card px-[30px] py-8 flex flex-col gap-[18px]">
-                            <h3 class="text-2xl font-medium text-stone-100 leading-normal tracking-tight">Basics</h3>
-                            <p class="font-medium text-stone-100">
-                                <span class="text-[32px]">$9</span><span class="text-base">/month</span>
-                            </p>
-                            <p class="text-base font-normal text-white/80 leading-normal">
-                                From idea to working product in 8-12 weeks. Test your concept fast without hiring a full team.
-                            </p>
-                            <ul class="list-disc list-outside pl-6 text-base text-white/80 leading-relaxed">
-                                <li>AI Product strategy</li>
-                                <li>Product Innovation</li>
-                                <li>UX research & flows</li>
-                                <li>UI design & systems</li>
-                                <li>Prototyping & validation</li>
-                                <li>Ongoing iterations</li>
-                            </ul>
-                            <a href="{{cta.primaryUrl}}" class="btn-hero self-start mt-2">
-                                <span class="font-bold text-[13px] leading-none">{{cta.primaryText}}</span>
-                            </a>
-                        </article>
-
-                        <!-- Enterprise Plan -->
-                        <article class="card px-[30px] py-8 flex flex-col gap-[18px] md:col-span-2 lg:col-span-1">
-                            <h3 class="text-2xl font-medium text-stone-100 leading-normal tracking-tight">Basics</h3>
-                            <p class="font-medium text-stone-100">
-                                <span class="text-[32px]">$9</span><span class="text-base">/month</span>
-                            </p>
-                            <p class="text-base font-normal text-white/80 leading-normal">
-                                From idea to working product in 8-12 weeks. Test your concept fast without hiring a full team.
-                            </p>
-                            <ul class="list-disc list-outside pl-6 text-base text-white/80 leading-relaxed">
-                                <li>AI Product strategy</li>
-                                <li>Product Innovation</li>
-                                <li>UX research & flows</li>
-                                <li>UI design & systems</li>
-                                <li>Prototyping & validation</li>
-                                <li>Ongoing iterations</li>
-                            </ul>
-                            <a href="{{cta.primaryUrl}}" class="btn-hero self-start mt-2">
-                                <span class="font-bold text-[13px] leading-none">{{cta.primaryText}}</span>
-                            </a>
-                        </article>
-
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <img src="images/landscape-1.png" alt="Nature landscape" class="w-full h-[300px] object-cover rounded-2xl">
+                        <img src="images/landscape-2.png" alt="Nature landscape" class="w-full h-[300px] object-cover rounded-2xl">
+                        <img src="images/landscape-3.png" alt="Nature landscape" class="w-full h-[300px] object-cover rounded-2xl">
                     </div>
                 </div>
             </section>
@@ -451,15 +357,14 @@
 
                     <!-- Section Header -->
                     <div class="flex flex-col gap-8 items-center text-center mb-16">
-                        <h2 id="testimonials-heading" class="text-2xl font-medium text-white leading-normal tracking-tight flex items-center justify-center gap-1">
-                            Our users <svg class="size-6 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg> using our product
+                        <h2 id="testimonials-heading" class="text-2xl font-medium text-cream leading-normal tracking-tight flex items-center justify-center gap-1">
+                            People <svg class="size-6 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg> gratu.
                         </h2>
                         <p class="text-[22px] font-normal text-stone-100 leading-normal tracking-tight max-w-xl">
-                            Building with AI is exciting, but most teams hit the same roadblocks: it takes too long to hire the right people, projects stall before they launch.
+                            Thousands are building a daily gratitude practice. Here's what they're saying.
                         </p>
-                        <!-- G2 Reviews Badge -->
-                        <div class="flex items-center gap-2 text-[13px] text-white font-medium">
-                            <span>G2</span>
+                        <!-- App Store Rating Badge -->
+                        <div class="flex items-center gap-2 text-[13px] text-cream font-medium">
                             <div class="flex -space-x-0.5 -translate-y-px">
                                 <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                 <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -467,7 +372,7 @@
                                 <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                 <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                             </div>
-                            <span>133+ Reviews</span>
+                            <span>Leading gratitude companion</span>
                         </div>
                     </div>
 
@@ -483,14 +388,8 @@
                                 <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                 <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                             </div>
-                            <p class="text-base text-white leading-normal">"Ideaware has been far more than just a staffing solution; they've been a true strategic partner, evolving with our needs and scaling alongside us."</p>
-                            <div class="flex items-center gap-3">
-                                <img src="images/avatar.webp" alt="Richard Cussons" class="w-9 h-9 rounded-full object-cover">
-                                <div>
-                                    <p class="font-semibold text-sm text-white">Richard Cussons</p>
-                                    <p class="text-sm text-white">Founder</p>
-                                </div>
-                            </div>
+                            <p class="text-base text-cream leading-normal">"By far the best of every journaling app. Simple and beautiful."</p>
+                            <p class="font-semibold text-sm text-cream">Sarah J.</p>
                         </article>
 
                         <!-- Testimonial 2 -->
@@ -502,14 +401,8 @@
                                 <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                 <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                             </div>
-                            <p class="text-base text-white leading-normal">"Ideaware has been far more than just a staffing solution; they've been a true strategic partner, evolving with our needs and scaling alongside us."</p>
-                            <div class="flex items-center gap-3">
-                                <img src="images/avatar.webp" alt="Richard Cussons" class="w-9 h-9 rounded-full object-cover">
-                                <div>
-                                    <p class="font-semibold text-sm text-white">Richard Cussons</p>
-                                    <p class="text-sm text-white">Founder</p>
-                                </div>
-                            </div>
+                            <p class="text-base text-cream leading-normal">"The best gratitude journaling app I've tried. And it's free! Simple, beautiful, and ad-free."</p>
+                            <p class="font-semibold text-sm text-cream">James K.</p>
                         </article>
 
                         <!-- Testimonial 3 -->
@@ -521,14 +414,8 @@
                                 <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                 <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                             </div>
-                            <p class="text-base text-white leading-normal">"Ideaware has been far more than just a staffing solution; they've been a true strategic partner, evolving with our needs and scaling alongside us."</p>
-                            <div class="flex items-center gap-3">
-                                <img src="images/avatar.webp" alt="Richard Cussons" class="w-9 h-9 rounded-full object-cover">
-                                <div>
-                                    <p class="font-semibold text-sm text-white">Richard Cussons</p>
-                                    <p class="text-sm text-white">Founder</p>
-                                </div>
-                            </div>
+                            <p class="text-base text-cream leading-normal">"This app somehow understands me perfectly. I look forward to my gratitude moment every morning."</p>
+                            <p class="font-semibold text-sm text-cream">Oregano</p>
                         </article>
 
                         <!-- Testimonial 4 -->
@@ -540,14 +427,8 @@
                                 <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                 <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                             </div>
-                            <p class="text-base text-white leading-normal">"Ideaware has been far more than just a staffing solution; they've been a true strategic partner, evolving with our needs and scaling alongside us."</p>
-                            <div class="flex items-center gap-3">
-                                <img src="images/avatar.webp" alt="Richard Cussons" class="w-9 h-9 rounded-full object-cover">
-                                <div>
-                                    <p class="font-semibold text-sm text-white">Richard Cussons</p>
-                                    <p class="text-sm text-white">Founder</p>
-                                </div>
-                            </div>
+                            <p class="text-base text-cream leading-normal">"This app is a peaceful, refreshing experience. I smile and feel uplifted after using it. This app is helping me see more in life."</p>
+                            <p class="font-semibold text-sm text-cream">Theresa L.</p>
                         </article>
 
                         <!-- Testimonial 5 -->
@@ -559,14 +440,8 @@
                                 <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                 <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                             </div>
-                            <p class="text-base text-white leading-normal">"Ideaware has been far more than just a staffing solution; they've been a true strategic partner, evolving with our needs and scaling alongside us."</p>
-                            <div class="flex items-center gap-3">
-                                <img src="images/avatar.webp" alt="Richard Cussons" class="w-9 h-9 rounded-full object-cover">
-                                <div>
-                                    <p class="font-semibold text-sm text-white">Richard Cussons</p>
-                                    <p class="text-sm text-white">Founder</p>
-                                </div>
-                            </div>
+                            <p class="text-base text-cream leading-normal">"Private, simple, no ads. Exactly what a good app should be."</p>
+                            <p class="font-semibold text-sm text-cream">Dave G.</p>
                         </article>
 
                         <!-- Testimonial 6 -->
@@ -578,14 +453,8 @@
                                 <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                 <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                             </div>
-                            <p class="text-base text-white leading-normal">"Ideaware has been far more than just a staffing solution; they've been a true strategic partner, evolving with our needs and scaling alongside us."</p>
-                            <div class="flex items-center gap-3">
-                                <img src="images/avatar.webp" alt="Richard Cussons" class="w-9 h-9 rounded-full object-cover">
-                                <div>
-                                    <p class="font-semibold text-sm text-white">Richard Cussons</p>
-                                    <p class="text-sm text-white">Founder</p>
-                                </div>
-                            </div>
+                            <p class="text-base text-cream leading-normal">"I was stuck in a slump. Finally an app that respects my data and helps me find gratitude."</p>
+                            <p class="font-semibold text-sm text-cream">Priya M.</p>
                         </article>
 
                     </div>
@@ -599,11 +468,11 @@
 
                     <!-- Section Header -->
                     <div class="flex flex-col gap-8 items-center text-center mb-16">
-                        <h2 id="faq-heading" class="text-2xl font-medium text-white leading-normal tracking-tight">
+                        <h2 id="faq-heading" class="text-2xl font-medium text-cream leading-normal tracking-tight">
                             FAQ
                         </h2>
                         <p class="text-[22px] font-normal text-stone-100 leading-normal tracking-tight max-w-xl">
-                            Have questions? We've got answers. Here are the most common things people ask us.
+                            Everything you need to know about getting started, staying consistent, and making gratitude part of your daily life.
                         </p>
                     </div>
 
@@ -613,15 +482,15 @@
                         <!-- FAQ Item 1 -->
                         <details class="group card">
                             <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-lg font-medium text-stone-200 list-none">
-                                <span>How does the free trial work?</span>
-                                <svg class="w-5 h-5 text-white transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <span>Is gratu. really free?</span>
+                                <svg class="w-5 h-5 text-cream transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                                 </svg>
                             </summary>
                             <div class="faq-answer">
                                 <div>
                                     <div class="px-6 pb-5 text-stone-300 leading-relaxed">
-                                        You get 14 days of full access to all features, no credit card required. At the end of your trial, you can choose a plan that fits your needs or continue with our free tier.
+                                        Yes! gratu. is completely free to download and use. All core features including daily journaling, reminders, and prompts are available at no cost. No hidden fees, no subscriptions required.
                                     </div>
                                 </div>
                             </div>
@@ -630,15 +499,15 @@
                         <!-- FAQ Item 2 -->
                         <details class="group card">
                             <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-lg font-medium text-stone-200 list-none">
-                                <span>Can I change my plan later?</span>
-                                <svg class="w-5 h-5 text-white transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <span>How do I start a gratitude practice?</span>
+                                <svg class="w-5 h-5 text-cream transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                                 </svg>
                             </summary>
                             <div class="faq-answer">
                                 <div>
                                     <div class="px-6 pb-5 text-stone-300 leading-relaxed">
-                                        Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any difference in billing.
+                                        Just download gratu. and write your first entry. Start with something simple - one thing you're grateful for today. Set a daily reminder and let the app guide you with thoughtful prompts. Consistency matters more than perfection.
                                     </div>
                                 </div>
                             </div>
@@ -647,15 +516,15 @@
                         <!-- FAQ Item 3 -->
                         <details class="group card">
                             <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-lg font-medium text-stone-200 list-none">
-                                <span>What payment methods do you accept?</span>
-                                <svg class="w-5 h-5 text-white transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <span>Is my journal private?</span>
+                                <svg class="w-5 h-5 text-cream transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                                 </svg>
                             </summary>
                             <div class="faq-answer">
                                 <div>
                                     <div class="px-6 pb-5 text-stone-300 leading-relaxed">
-                                        We accept all major credit cards (Visa, Mastercard, Amex), PayPal, and bank transfers for annual plans. Enterprise customers can also pay via invoice.
+                                        Absolutely. Your entries are stored locally on your device and protected by Face ID or Touch ID. We never store your data on our servers, and there's zero tracking or analytics. Your thoughts stay completely private.
                                     </div>
                                 </div>
                             </div>
@@ -664,15 +533,15 @@
                         <!-- FAQ Item 4 -->
                         <details class="group card">
                             <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-lg font-medium text-stone-200 list-none">
-                                <span>Is my data secure?</span>
-                                <svg class="w-5 h-5 text-white transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <span>Can I sync across my Apple devices?</span>
+                                <svg class="w-5 h-5 text-cream transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                                 </svg>
                             </summary>
                             <div class="faq-answer">
                                 <div>
                                     <div class="px-6 pb-5 text-stone-300 leading-relaxed">
-                                        Absolutely. We use AES-256 encryption for data at rest, TLS 1.3 for data in transit, and are SOC 2 Type II certified. Your data is backed up daily across multiple regions.
+                                        Yes! gratu. uses iCloud to securely sync your gratitude entries across all your Apple devices. Write on your iPhone, read on your iPad - your journal goes wherever you go.
                                     </div>
                                 </div>
                             </div>
@@ -681,15 +550,15 @@
                         <!-- FAQ Item 5 -->
                         <details class="group card">
                             <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-lg font-medium text-stone-200 list-none">
-                                <span>Do you offer refunds?</span>
-                                <svg class="w-5 h-5 text-white transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <span>What if I miss a day?</span>
+                                <svg class="w-5 h-5 text-cream transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                                 </svg>
                             </summary>
                             <div class="faq-answer">
                                 <div>
                                     <div class="px-6 pb-5 text-stone-300 leading-relaxed">
-                                        Yes, we offer a 30-day money-back guarantee. If you're not satisfied for any reason, contact our support team for a full refund.
+                                        That's okay! gratu. is designed to encourage, not pressure. Missing a day doesn't break your practice. Just pick up where you left off. Progress isn't about perfection - it's about showing up when you can.
                                     </div>
                                 </div>
                             </div>
@@ -698,15 +567,15 @@
                         <!-- FAQ Item 6 -->
                         <details class="group card">
                             <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-lg font-medium text-stone-200 list-none">
-                                <span>How do I get support?</span>
-                                <svg class="w-5 h-5 text-white transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <span>Is there an Android version?</span>
+                                <svg class="w-5 h-5 text-cream transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                                 </svg>
                             </summary>
                             <div class="faq-answer">
                                 <div>
                                     <div class="px-6 pb-5 text-stone-300 leading-relaxed">
-                                        We offer email support for all plans, with priority chat support for Pro and Enterprise customers. Our average response time is under 2 hours during business hours.
+                                        gratu. is currently available exclusively on iOS. We're focused on creating the best possible experience for iPhone and iPad users. Sign up for updates to be notified if that changes.
                                     </div>
                                 </div>
                             </div>
@@ -746,14 +615,14 @@
                     <!-- Main Content Block -->
                     <div class="flex flex-col items-center gap-7">
                         <!-- Main Headline -->
-                        <h2 class="text-5xl md:text-[56px] font-medium text-white text-center leading-none tracking-[-2.8px]">
-                            Your life, made easier.
+                        <h2 class="text-5xl md:text-[56px] font-medium text-cream text-center leading-none tracking-[-2.8px]">
+                            Start your gratitude journey today.
                         </h2>
 
                         <!-- Subtext -->
-                        <p class="text-[17px] font-normal text-white text-center leading-normal tracking-[-0.34px] max-w-[487px]">
-                            The AI-native code editor that gets it exactly right.<br/>
-                            No approximation. No bloat. Just perfect code, every time.
+                        <p class="text-[17px] font-normal text-cream text-center leading-normal tracking-[-0.34px] max-w-[487px]">
+                            A few minutes a day can change how you see the world.<br/>
+                            Download gratu. and discover the power of daily gratitude.
                         </p>
                     </div>
 
@@ -762,9 +631,9 @@
                         <span class="font-bold text-[13px] leading-none">{{cta.primaryText}}</span>
                     </a>
 
-                    <!-- G2 Badge -->
+                    <!-- App Store Rating -->
                     <div class="flex gap-2 items-center justify-center">
-                        <span class="text-[13px] font-medium text-white">G2</span>
+                        <span class="text-[13px] font-medium text-cream">App Store</span>
                         <div class="flex items-center -translate-y-px">
                             <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                             <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -772,25 +641,25 @@
                             <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                             <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         </div>
-                        <span class="text-[13px] font-medium text-white">133+ Reviews</span>
+                        <span class="text-[13px] font-medium text-cream">4.9</span>
                     </div>
 
                     <!-- Social Icons -->
                     <nav class="flex gap-3.5 items-center justify-center" aria-label="Social media links">
                         {{#if social.twitter}}<!-- X (Twitter) -->
-                        <a href="{{social.twitter}}" target="_blank" rel="noopener" class="text-white hover:text-white/70 transition-colors" aria-label="Follow us on X">
+                        <a href="{{social.twitter}}" target="_blank" rel="noopener" class="text-cream hover:text-cream/70 transition-colors" aria-label="Follow us on X">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                             </svg>
                         </a>{{/if}}
                         {{#if social.instagram}}<!-- Instagram -->
-                        <a href="{{social.instagram}}" target="_blank" rel="noopener" class="text-white hover:text-white/70 transition-colors" aria-label="Follow us on Instagram">
+                        <a href="{{social.instagram}}" target="_blank" rel="noopener" class="text-cream hover:text-cream/70 transition-colors" aria-label="Follow us on Instagram">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/>
                             </svg>
                         </a>{{/if}}
                         {{#if social.linkedin}}<!-- LinkedIn -->
-                        <a href="{{social.linkedin}}" target="_blank" rel="noopener" class="text-white hover:text-white/70 transition-colors" aria-label="Follow us on LinkedIn">
+                        <a href="{{social.linkedin}}" target="_blank" rel="noopener" class="text-cream hover:text-cream/70 transition-colors" aria-label="Follow us on LinkedIn">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
@@ -800,10 +669,10 @@
                     <!-- Footer Links -->
                     <div class="text-center space-y-2">
                         <div class="flex gap-4 justify-center">
-                            <a href="{{legal.privacyUrl}}" class="text-sm font-normal text-white hover:text-white/70 transition-colors">Privacy Policy</a>
-                            <a href="{{legal.termsUrl}}" class="text-sm font-normal text-white hover:text-white/70 transition-colors">Terms & Conditions</a>
+                            <a href="{{legal.privacyUrl}}" class="text-sm font-normal text-cream hover:text-cream/70 transition-colors">Privacy Policy</a>
+                            <a href="{{legal.termsUrl}}" class="text-sm font-normal text-cream hover:text-cream/70 transition-colors">Terms & Conditions</a>
                         </div>
-                        <p class="text-sm font-normal text-white tracking-[-0.28px]">&copy;{{footer.copyrightYear}} All rights reserved, {{footer.companyName}}.</p>
+                        <p class="text-sm font-normal text-cream tracking-[-0.28px]">&copy;{{footer.copyrightYear}} All rights reserved, {{footer.companyName}}.</p>
                     </div>
 
                 </div>
@@ -815,7 +684,7 @@
                             type="email"
                             name="email"
                             placeholder="Your email"
-                            class="w-[300px] h-[45px] px-5 rounded-full backdrop-blur-sm bg-white/5 border border-white/30 text-white text-sm placeholder:text-white focus:outline-none focus:border-white/50 transition-colors"
+                            class="w-[300px] h-[45px] px-5 rounded-full backdrop-blur-sm bg-white/5 border border-white/30 text-cream text-sm placeholder:text-cream focus:outline-none focus:border-white/50 transition-colors"
                             required
                         >
                         <button type="submit" class="btn-hero">

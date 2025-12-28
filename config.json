@@ -1,25 +1,25 @@
 {
   "site": {
-    "title": "Product Name",
-    "tagline": "Your tagline here",
-    "description": "Your product description goes here. Keep it under 160 characters for best SEO results.",
-    "url": "https://yourproduct.com",
-    "contactEmail": "hello@yourproduct.com",
+    "title": "gratu.",
+    "tagline": "Find peace and calm, one gratitude a day",
+    "description": "A beautiful journaling app to help you slow down, reflect, and find joy in everyday moments.",
+    "url": "https://gratu.app",
+    "contactEmail": "hello@gratu.app",
     "ogImage": "images/og-image.png",
-    "themeColor": "#2a789b"
+    "themeColor": "#132417"
   },
   "analytics": {
     "plausibleDomain": ""
   },
   "cta": {
-    "primaryUrl": "#",
-    "primaryText": "Get Started →",
-    "navButtonText": "Get Started"
+    "primaryUrl": "https://apps.apple.com/app/gratu-gratitude-journal/id6756619148",
+    "primaryText": "Download on the App Store",
+    "navButtonText": "Download"
   },
   "social": {
-    "twitter": "https://x.com/andresmax",
-    "instagram": "https://www.instagram.com/andresmax",
-    "linkedin": "https://www.linkedin.com/in/andresmax"
+    "twitter": "https://x.com/gratuapp",
+    "instagram": "https://www.instagram.com/gratuapp",
+    "linkedin": ""
   },
   "legal": {
     "privacyUrl": "privacy.html",
@@ -27,8 +27,8 @@
   },
   "footer": {
     "copyrightYear": "2025",
-    "companyName": "Your Company",
-    "badgeText": "Join the awesome"
+    "companyName": "gratu.",
+    "badgeText": "Free on the App Store"
   },
   "forms": {
     "emailAction": "#"

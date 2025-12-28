@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['"Nunito"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
         'brand-primary': 'var(--brand-primary)',
@@ -12,6 +12,7 @@ module.exports = {
         'surface-dark': 'var(--surface-dark)',
         'surface-footer': 'var(--surface-footer)',
         'surface-divider': 'var(--surface-divider)',
+        'cream': '#fafbf7',
       },
       height: {
         'portfolio': '360px',
