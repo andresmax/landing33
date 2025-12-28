@@ -712,19 +712,23 @@
                 </div>
 
                 <!-- Email Signup Form -->
-                <div class="flex justify-center mt-24 pb-12">
-                    <form action="#" method="POST" class="flex gap-2 items-center">
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Your email"
-                            class="w-[300px] h-[45px] px-5 rounded-full backdrop-blur-sm bg-white/5 border border-white/30 text-cream text-sm placeholder:text-cream focus:outline-none focus:border-white/50 transition-colors"
-                            required
-                        >
-                        <button type="submit" class="btn-hero">
-                            <span class="font-bold text-[13px] leading-none">Get Updates</span>
-                        </button>
+                <div class="flex flex-col items-center mt-24 pb-12">
+                    <form action="https://app.kit.com/forms/8868106/subscriptions" method="POST" data-sv-form="8868106" data-uid="c5570a1c3f" data-format="inline" data-version="5" class="seva-form formkit-form flex gap-2 items-center">
+                        <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert" style="display:none;"></ul>
+                        <div data-element="fields" class="formkit-fields flex gap-2 items-center">
+                            <input
+                                type="email"
+                                name="email_address"
+                                placeholder="Your email"
+                                class="formkit-input w-[300px] h-[45px] px-5 rounded-full backdrop-blur-sm bg-white/5 border border-white/30 text-cream text-sm placeholder:text-cream focus:outline-none focus:border-white/50 transition-colors"
+                                required
+                            >
+                            <button type="submit" data-element="submit" class="formkit-submit btn-hero">
+                                <span class="font-bold text-[13px] leading-none">Get Updates</span>
+                            </button>
+                        </div>
                     </form>
+                    <p class="formkit-message text-sm text-cream/70 mt-3" style="display:none;"></p>
                 </div>
 
             </div>
@@ -837,6 +841,9 @@
         updateNavOnScroll(); // Check initial state
     })();
     </script>
+
+    <!-- Kit (ConvertKit) Form Handler -->
+    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 </body>
 
 </html>

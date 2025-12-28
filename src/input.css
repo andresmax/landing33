@@ -17,8 +17,8 @@ a:visited {
 }
 
 ::selection {
-  background-color: var(--brand-primary);
-  color: white;
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
 }
 
 /* ===========================================
