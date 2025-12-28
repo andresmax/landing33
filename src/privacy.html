@@ -9,7 +9,7 @@
     <meta name="robots" content="noindex">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="styles.css">
@@ -21,28 +21,37 @@
         <!-- Header Background Section -->
         <div class="relative w-full">
             <!-- Background image -->
-            <div class="absolute inset-0 bg-cover bg-top bg-no-repeat h-[900px]" style="background-image: url('images/headerbg.png')"></div>
+            <div class="absolute inset-0 bg-cover bg-top bg-no-repeat h-[900px] opacity-50" style="background-image: url('images/headerbg.png')"></div>
             <!-- Gradient overlay -->
             <div class="absolute inset-0 pointer-events-none bg-header-gradient h-[900px]"></div>
 
             <!-- Navigation -->
             <header class="fixed top-0 left-0 right-0 z-50 py-4" role="banner">
-                <nav class="max-w-xl mx-auto px-6 sm:px-6 md:px-8 lg:px-12 relative" role="navigation" aria-label="Main navigation">
+                <nav class="max-w-md mx-auto px-6 sm:px-6 md:px-8 lg:px-12 relative" role="navigation" aria-label="Main navigation">
                     <div class="nav-glass flex items-center justify-between pl-5 pr-1.5 py-1.5">
                         <!-- Left: Logo -->
                         <div class="flex-shrink-0 relative z-10">
                             <a href="index.html" class="block" aria-label="Home">
-                                <svg class="h-4 w-auto" viewBox="0 0 39 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25.4004 17H21.9963L13.5702 3.87775L6.11917 14.1887H16.1048L18.2348 16.9183H0L12.9012 8.2349e-06H14.4843L25.4004 17Z" fill="white"/>
-                                    <path d="M32.2171 17H28.7547L17.6783 8.2349e-06H21.1407L26.6789 8.5L32.2171 17Z" fill="white"/>
-                                    <path d="M39 17H35.5376L24.4612 0H27.9236L33.4618 8.5L39 17Z" fill="white"/>
-                                </svg>
+                                <img src="images/logo.svg" alt="gratu." class="h-7 w-auto">
                             </a>
                         </div>
 
-                        <!-- Right: Back Button -->
-                        <a href="index.html" class="flex-shrink-0 bg-white/20 hover:bg-white/30 text-white text-xs font-medium px-3 py-2.5 rounded-full transition-colors">
-                            Back to Home
+                        <!-- Center: Navigation Links -->
+                        <div class="hidden sm:flex items-center gap-3 font-medium text-sm text-stone-300">
+                            <a href="index.html#features" class="hover:text-cream transition-colors">Features</a>
+                            <a href="index.html#testimonials" class="hover:text-cream transition-colors">Reviews</a>
+                            <a href="index.html#faq" class="hover:text-cream transition-colors">FAQ</a>
+                        </div>
+
+                        <!-- Right: CTA Button -->
+                        <a href="{{cta.primaryUrl}}" class="hidden sm:flex items-center gap-1.5 flex-shrink-0 nav-button text-xs font-medium px-3 py-2.5 rounded-full transition-colors">
+                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                            Download
+                        </a>
+
+                        <!-- Mobile: Back to Home -->
+                        <a href="index.html" class="sm:hidden flex-shrink-0 nav-button text-xs font-medium px-3 py-2.5 rounded-full transition-colors">
+                            Home
                         </a>
                     </div>
                 </nav>

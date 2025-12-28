@@ -71,15 +71,42 @@ a:visited {
   position: relative;
 }
 
+/* Nav Logo */
+.logo-link {
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.logo-link:hover {
+  color: var(--brand-accent);
+}
+
+/* Nav Links */
+.nav-link:hover {
+  color: var(--brand-accent);
+}
+
 /* Nav Button */
 .nav-button {
   background-color: var(--nav-button-bg);
   color: var(--nav-button-text) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-button:hover {
+header:not(.scrolled) .nav-button:hover {
   background-color: var(--brand-primary);
   color: white !important;
+}
+
+/* Nav Button - Scrolled State */
+header.scrolled .nav-button {
+  background-color: var(--nav-button-scrolled-bg);
+  color: var(--nav-button-scrolled-text) !important;
+}
+
+header.scrolled .nav-button:hover {
+  background-color: var(--nav-button-scrolled-hover);
+  color: var(--nav-button-scrolled-text) !important;
 }
 
 .nav-glass::before {

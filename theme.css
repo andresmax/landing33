@@ -37,6 +37,11 @@
   --nav-button-hover: #f0f0ec;     /* Slightly darker on hover */
   --nav-button-text: #132417;      /* Dark green text */
 
+  /* Nav CTA button - scrolled state */
+  --nav-button-scrolled-bg: #b1ec6f;       /* Lime green */
+  --nav-button-scrolled-hover: #9fd95f;    /* Darker lime */
+  --nav-button-scrolled-text: #132417;     /* Dark green text */
+
   /* Secondary button (Get Updates) */
   --button-secondary-bg: #fafbf7;
   --button-secondary-text: #132417;
