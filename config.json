@@ -9,7 +9,8 @@
     "themeColor": "#132417"
   },
   "analytics": {
-    "plausibleDomain": ""
+    "plausibleDomain": "",
+    "plausibleScriptUrl": "https://plausible.io/js/pa-U9kjL5MGjsrRFWbCOurK9.js"
   },
   "cta": {
     "primaryUrl": "https://apps.apple.com/app/gratu-gratitude-journal/id6756619148",
