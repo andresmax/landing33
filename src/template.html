@@ -75,7 +75,7 @@
     {{#if analytics.plausibleScriptUrl}}
     <script async src="{{analytics.plausibleScriptUrl}}"></script>
     <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
-    {{else}}{{#if analytics.plausibleDomain}}<script defer data-domain="{{analytics.plausibleDomain}}" src="https://plausible.io/js/script.js"></script>{{/if}}{{/if}}
+    {{/if}}
 </head>
 
 <body class="font-sans font-regular text-stone-200 bg-surface-dark">
