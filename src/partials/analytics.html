@@ -1,0 +1,15 @@
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QX27T7JZWP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-QX27T7JZWP');
+    </script>
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    {{#if analytics.plausibleScriptUrl}}
+    <script async src="{{analytics.plausibleScriptUrl}}"></script>
+    <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+    {{/if}}

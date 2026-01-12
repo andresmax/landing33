@@ -23,9 +23,24 @@ function flattenConfig(obj, prefix = '') {
 
 const flatConfig = flattenConfig(config);
 
+// Load a partial file
+function loadPartial(partialName) {
+  const partialPath = path.join(__dirname, 'src', 'partials', `${partialName}.html`);
+  if (fs.existsSync(partialPath)) {
+    return fs.readFileSync(partialPath, 'utf8');
+  }
+  console.warn(`Warning: Partial "${partialName}" not found at ${partialPath}`);
+  return '';
+}
+
 // Process a template file
 function processTemplate(inputFile, outputFile) {
-  const template = fs.readFileSync(inputFile, 'utf8');
+  let template = fs.readFileSync(inputFile, 'utf8');
+
+  // Process partials: {{> partialName}}
+  template = template.replace(/{{>\s*(\S+)\s*}}/g, (match, partialName) => {
+    return loadPartial(partialName);
+  });
 
   // Replace all {{key}} placeholders
   let output = template;

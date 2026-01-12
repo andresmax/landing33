@@ -71,11 +71,7 @@
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Privacy-friendly analytics by Plausible -->
-    {{#if analytics.plausibleScriptUrl}}
-    <script async src="{{analytics.plausibleScriptUrl}}"></script>
-    <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
-    {{/if}}
+{{> analytics}}
 </head>
 
 <body class="font-sans font-regular text-stone-200 bg-surface-dark">
