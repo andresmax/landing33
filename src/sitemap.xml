@@ -6,6 +6,26 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>{{site.url}}/gratitude-journal-prompts.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>{{site.url}}/gratitude-journal-app.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>{{site.url}}/benefits-of-gratitude-journaling.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>{{site.url}}/private-journal-app.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>{{site.url}}/privacy.html</loc>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>

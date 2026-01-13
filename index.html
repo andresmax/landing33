@@ -564,7 +564,7 @@
                             <div class="faq-answer">
                                 <div>
                                     <div class="px-6 pb-5 text-stone-300 leading-relaxed">
-                                        Just download gratu and write your first entry. Start with something simple - one thing you're grateful for today. Set a daily reminder and let the app guide you with thoughtful prompts. Consistency matters more than perfection.
+                                        Just download gratu and write your first entry. Start with something simple - one thing you're grateful for today. Set a daily reminder and let the app guide you with thoughtful prompts. Need inspiration? Check out our <a href="gratitude-journal-prompts.html" class="text-cream underline">100+ gratitude journal prompts</a>. Consistency matters more than perfection.
                                     </div>
                                 </div>
                             </div>
@@ -581,7 +581,7 @@
                             <div class="faq-answer">
                                 <div>
                                     <div class="px-6 pb-5 text-stone-300 leading-relaxed">
-                                        Absolutely. Your entries are stored locally on your device and protected by Face ID or Touch ID. We never store your data on our servers, and there's zero tracking or analytics. Your thoughts stay completely private.
+                                        Absolutely. Your entries are stored locally on your device and protected by Face ID or Touch ID. We never store your data on our servers, and there's zero tracking or analytics. Your thoughts stay completely private. Learn more about our <a href="private-journal-app.html" class="text-cream underline">privacy-first approach</a>.
                                     </div>
                                 </div>
                             </div>
@@ -615,7 +615,7 @@
                             <div class="faq-answer">
                                 <div>
                                     <div class="px-6 pb-5 text-stone-300 leading-relaxed">
-                                        That's okay! gratu is designed to encourage, not pressure. Missing a day doesn't break your practice. Just pick up where you left off. Progress isn't about perfection - it's about showing up when you can.
+                                        That's okay! gratu is designed to encourage, not pressure. Missing a day doesn't break your practice. Just pick up where you left off. Progress isn't about perfection - it's about showing up when you can. Learn about the <a href="benefits-of-gratitude-journaling.html" class="text-cream underline">science-backed benefits of gratitude journaling</a>.
                                     </div>
                                 </div>
                             </div>
@@ -734,7 +734,12 @@
                             <a href="privacy.html" class="text-sm font-normal text-cream hover:text-cream/70 transition-colors">Privacy Policy</a>
                             <a href="terms.html" class="text-sm font-normal text-cream hover:text-cream/70 transition-colors">Terms & Conditions</a>
                         </div>
-                        <p class="text-sm font-normal text-cream tracking-[-0.28px]">&copy;2025 <a href="https://mx.works" class="hover:text-cream/70 transition-colors">mx.works</a></p>
+                        <div class="flex gap-4 justify-center flex-wrap">
+                            <a href="gratitude-journal-prompts.html" class="text-sm font-normal text-cream/70 hover:text-cream transition-colors">Journal Prompts</a>
+                            <a href="benefits-of-gratitude-journaling.html" class="text-sm font-normal text-cream/70 hover:text-cream transition-colors">Benefits</a>
+                            <a href="private-journal-app.html" class="text-sm font-normal text-cream/70 hover:text-cream transition-colors">Privacy Features</a>
+                        </div>
+                        <p class="text-sm font-normal text-cream tracking-[-0.28px]">&copy;2026 <a href="https://mx.works" class="hover:text-cream/70 transition-colors">mx.works</a></p>
                     </div>
 
                 </div>
@@ -770,6 +775,9 @@
         if (!content) return;
 
         details.addEventListener('click', (e) => {
+            // Allow links to work normally
+            if (e.target.tagName === 'A' || e.target.closest('a')) return;
+
             if (details.open) {
                 e.preventDefault();
                 content.style.gridTemplateRows = '0fr';
